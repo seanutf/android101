@@ -26,5 +26,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         tvText.setText("dddddd");
+        tvText.setTextSize(23);
     }
 }

@@ -3,6 +3,7 @@ package com.seanutf.android;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +16,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        TextView tvText = findViewById(R.id.tvText);
+        final TextView tvText = findViewById(R.id.tvText);
+
+        tvText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tvText.setText("hahhahah");
+            }
+        });
+
+        tvText.setText("dddddd");
     }
 }

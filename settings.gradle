@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':commonlint'
 rootProject.name='android101'

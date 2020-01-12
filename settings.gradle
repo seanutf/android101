@@ -1,2 +1,2 @@
-include ':app', ':commonlint'
+include ':app', ':commonlint', ':cmmonui'
 rootProject.name='android101'

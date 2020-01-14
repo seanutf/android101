@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                             gotoCustom();
                             break;
                         case 1:
-                            gotoArch();
+                            //gotoArch();
                             break;
                         case 2:
                             gotoAlgorithm();

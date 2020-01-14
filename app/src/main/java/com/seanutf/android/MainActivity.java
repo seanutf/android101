@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                             //gotoAlgorithm();
                             break;
                         case 3:
-                            gotoKotlin();
+                            //gotoKotlin();
                             break;
                         case 4:
                             gotoSystem();

@@ -12,5 +12,8 @@ public class CustomViewActivity extends AppCompatActivity {
     public static void startActivity(AppCompatActivity appCompatActivity){
         Intent intent = new Intent(appCompatActivity, CustomViewActivity.class);
         appCompatActivity.startActivity(intent);
-    }
+  }
+@override
+public void onCreate(Bundle saveInstanceStatus){
+}
 }

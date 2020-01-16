@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.seanutf.android.custom.CustomViewActivity;
+import com.seanutf.android.dagger.DaggerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -70,6 +71,9 @@ public class MainActivity extends AppCompatActivity {
                 case 7:
                     ((ViewItem)holder).tvText.setText("设计模式");
                     break;
+                case 8:
+                    ((ViewItem)holder).tvText.setText("依赖注入Dagger");
+                    break;
             }
 
             ((ViewItem)holder).tvText.setOnClickListener(new View.OnClickListener() {
@@ -100,6 +104,9 @@ public class MainActivity extends AppCompatActivity {
                         case 7:
                             gotoDesignPatterns();
                             break;
+                        case 8:
+                            gotoDagger();
+                            break;
                     }
                 }
             });
@@ -112,6 +119,10 @@ public class MainActivity extends AppCompatActivity {
         public int getItemCount() {
             return 8;
         }
+    }
+
+    private void gotoDagger() {
+        DaggerActivity.startActivity(this);
     }
 
     private void gotoDesignPatterns() {

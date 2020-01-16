@@ -13,7 +13,8 @@ public class CustomViewActivity extends AppCompatActivity {
         Intent intent = new Intent(appCompatActivity, CustomViewActivity.class);
         appCompatActivity.startActivity(intent);
   }
-@override
-public void onCreate(Bundle saveInstanceStatus){
-}
+    @Override
+    protected void onCreate(Bundle savedInstanceState){
+        
+    }
 }

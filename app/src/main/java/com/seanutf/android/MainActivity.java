@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                     ((ViewItem)holder).itemMainListBinding.tvText.setText("设计模式");
                     break;
                 case 8:
-                    ((ViewItem)holder).tvText.setText("依赖注入Dagger");
+                    ((ViewItem)holder).itemMainListBinding.tvText.setText("依赖注入Dagger");
                     break;
             }
 

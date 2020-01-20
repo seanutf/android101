@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
         activityBind.rvMain.setLayoutManager(new LinearLayoutManager(this));
 
         activityBind.rvMain.setAdapter(new MainAdapter());
+        activityBind.tvText.setText("这是一个测试文案");
+        activityBind.tvTitle.setText("这是一个测试标题");
+        activityBind.tvContent.setText("这是一个测试内容");
     }
 
     class MainAdapter extends RecyclerView.Adapter{

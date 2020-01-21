@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion rootProject.ext.compileVersion
-    buildToolsVersion "29.0.2"
+    buildToolsVersion rootProject.ext.buildVersion
     defaultConfig {
         applicationId "com.seanutf.android"
-        minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.ext.minVersion
+        targetSdkVersion rootProject.ext.targetVersion
+        versionCode rootProject.ext.appVersionCode
+        versionName rootProject.ext.appVersionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -29,7 +29,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    api 'androidx.appcompat:appcompat:1.1.0'
+    api "androidx.appcompat:appcompat:${rootProject.ext.appcompatVersion}"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'

@@ -1,3 +1,16 @@
 ext{
+
+    //base
     compileVersion = 29
+    buildVersion = "29.0.2"
+    minVersion = 21
+    targetVersion = 29
+    appVersionName = "1.0"
+    appVersionCode = 1
+
+    //common
+    appcompatVersion = "1.1.0"
+
+    //test
+    junitVersion = "4.12"
 }

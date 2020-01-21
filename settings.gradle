@@ -1,3 +1,4 @@
 include ':app', ':commonlint', ':cmmonui'
 rootProject.name='android101'
 include ':login'
+include ':version'

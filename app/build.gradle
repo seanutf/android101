@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion rootProject.ext.compileVersion
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.seanutf.android"

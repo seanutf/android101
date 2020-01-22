@@ -10,7 +10,13 @@ ext{
 
     //common
     appcompatVersion = "1.1.0"
+    daggerVersion = "2.25.4"
+    daggerCompilerVersion = "2.25.4"
 
     //test
     junitVersion = "4.12"
+    testRunnerVersion = "1.2.0"
+    espressoVersion = "3.2.0"
+
+
 }

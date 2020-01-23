@@ -2,6 +2,8 @@ package com.seanutf.android;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.ViewModel;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         activityBind.tvText.setText("这是一个测试文案");
         activityBind.tvTitle.setText("这是一个测试标题");
         activityBind.tvContent.setText("这是一个测试内容");
+
     }
 
     class MainAdapter extends RecyclerView.Adapter{

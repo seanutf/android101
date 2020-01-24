@@ -6,4 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".arch.ArchActivity">
 
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/tvText"
+        android:textStyle="bold"
+        android:textColor="#555555"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

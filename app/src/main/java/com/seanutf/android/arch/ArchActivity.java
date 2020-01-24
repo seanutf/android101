@@ -15,5 +15,10 @@ public class ArchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         archBinding = ActivityArchBinding.inflate(getLayoutInflater());
         setContentView(archBinding.getRoot());
+        initView();
+    }
+
+    private void initView() {
+        archBinding.tvText.setText("明天会更好");
     }
 }

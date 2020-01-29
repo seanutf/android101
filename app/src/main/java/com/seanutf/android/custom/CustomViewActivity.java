@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.seanutf.android.databinding.ActivityCustomViewBinding;
 import com.seanutf.cmmonui.BaseActivity;
 
 /**
@@ -16,8 +17,12 @@ public class CustomViewActivity extends BaseActivity {
         Intent intent = new Intent(appCompatActivity, CustomViewActivity.class);
         appCompatActivity.startActivity(intent);
   }
+
+    ActivityCustomViewBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+        binding = ActivityCustomViewBinding.inflate(getLayoutInflater());
+
     }
 }

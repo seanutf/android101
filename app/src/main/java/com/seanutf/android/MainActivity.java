@@ -16,8 +16,9 @@ import com.seanutf.android.custom.CustomViewActivity;
 import com.seanutf.android.databinding.ActivityMainBinding;
 import com.seanutf.android.databinding.ItemMainListBinding;
 import com.seanutf.android.dagger.DaggerActivity;
+import com.seanutf.cmmonui.BaseActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     ActivityMainBinding activityBind;
     @Override

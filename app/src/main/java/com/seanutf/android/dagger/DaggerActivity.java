@@ -6,8 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.seanutf.android.R;
+import com.seanutf.cmmonui.BaseActivity;
 
-public class DaggerActivity extends AppCompatActivity {
+public class DaggerActivity extends BaseActivity {
 
     public static void startActivity(AppCompatActivity activity){
         Intent intent = new Intent(activity, DaggerActivity.class);

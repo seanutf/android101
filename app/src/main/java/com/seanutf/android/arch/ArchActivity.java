@@ -6,8 +6,9 @@ import android.os.Bundle;
 
 import com.seanutf.android.R;
 import com.seanutf.android.databinding.ActivityArchBinding;
+import com.seanutf.cmmonui.BaseActivity;
 
-public class ArchActivity extends AppCompatActivity {
+public class ArchActivity extends BaseActivity {
 
     ActivityArchBinding archBinding;
     @Override

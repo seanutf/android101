@@ -54,7 +54,17 @@ public class FirstCustomView extends View {
         设置描边宽度
         * */
 
+        /*Canvas使用基础
+        //设置背景
+        drawColor(), drawARGB(), drawRGB()
+         */
 
+        //1.设置画布背景为紫色
+        canvas.drawRGB(255, 0, 255);
+        //同效果，其他形式实现
+        //canvas.drawRGB(0xFF, 0x00, 0xFF);
+        //canvas.drawColor(0xFFFF00FF);
+        //canvas.drawARGB(0xFF, 0xFF, 0, 0xFF);
 
     }
 }

@@ -23,6 +23,6 @@ public class CustomViewActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         binding = ActivityCustomViewBinding.inflate(getLayoutInflater());
-
+        setContentView(binding.getRoot());
     }
 }

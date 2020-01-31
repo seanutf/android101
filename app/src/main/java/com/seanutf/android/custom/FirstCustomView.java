@@ -66,5 +66,8 @@ public class FirstCustomView extends View {
         //canvas.drawColor(0xFFFF00FF);
         //canvas.drawARGB(0xFF, 0xFF, 0, 0xFF);
 
+        //2.画直线
+        //canvas.drawLine();
+
     }
 }

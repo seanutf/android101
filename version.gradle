@@ -12,6 +12,8 @@ ext{
     appcompatVersion = "1.1.0"
     daggerVersion = "2.25.4"
     daggerCompilerVersion = "2.25.4"
+    lifecycleVersion = "2.2.0"
+    mmkvVersion = '1.0.16'
 
     //test
     junitVersion = "4.12"

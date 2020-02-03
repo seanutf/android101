@@ -2,33 +2,41 @@ package com.seanutf.android;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.ViewModel;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.seanutf.android.custom.CustomViewActivity;
+import com.seanutf.android.databinding.ActivityMainBinding;
+import com.seanutf.android.databinding.ItemMainListBinding;
 import com.seanutf.android.dagger.DaggerActivity;
+import com.seanutf.cmmonui.BaseActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
+    ActivityMainBinding activityBind;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        activityBind = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(activityBind.getRoot());
         initView();
     }
 
     private void initView() {
-        final RecyclerView rvMain = findViewById(R.id.rvMain);
+        activityBind.rvMain.setLayoutManager(new LinearLayoutManager(this));
 
-        rvMain.setLayoutManager(new LinearLayoutManager(this));
+        activityBind.rvMain.setAdapter(new MainAdapter());
+        activityBind.tvText.setText("这是一个测试文案");
+        activityBind.tvTitle.setText("这是一个测试标题");
+        activityBind.tvContent.setText("这是一个测试内容");
 
-        rvMain.setAdapter(new MainAdapter());
     }
 
     class MainAdapter extends RecyclerView.Adapter{
@@ -37,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         @NonNull
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = getLayoutInflater().inflate(R.layout.item_main_list, parent,false);
-            return new ViewItem(view);
+            ItemMainListBinding itemMainListBinding = ItemMainListBinding.inflate(getLayoutInflater(),parent, false);
+            return new ViewItem(itemMainListBinding);
         }
 
 
@@ -48,35 +56,35 @@ public class MainActivity extends AppCompatActivity {
 
             switch (position){
                 case 0:
-                    ((ViewItem)holder).tvText.setText("自定义View");
+                    ((ViewItem)holder).itemMainListBinding.tvText.setText("自定义View");
                     break;
                 case 1:
-                    ((ViewItem)holder).tvText.setText("架构");
+                    ((ViewItem)holder).itemMainListBinding.tvText.setText("架构");
                     break;
                 case 2:
-                    ((ViewItem)holder).tvText.setText("算法");
+                    ((ViewItem)holder).itemMainListBinding.tvText.setText("算法");
                     break;
                 case 3:
-                    ((ViewItem)holder).tvText.setText("Kotlin");
+                    ((ViewItem)holder).itemMainListBinding.tvText.setText("Kotlin");
                     break;
                 case 4:
-                    ((ViewItem)holder).tvText.setText("系统源码");
+                    ((ViewItem)holder).itemMainListBinding.tvText.setText("系统源码");
                     break;
                 case 5:
-                    ((ViewItem)holder).tvText.setText("Flutter");
+                    ((ViewItem)holder).itemMainListBinding.tvText.setText("Flutter");
                     break;
                 case 6:
-                    ((ViewItem)holder).tvText.setText("组件化");
+                    ((ViewItem)holder).itemMainListBinding.tvText.setText("组件化");
                     break;
                 case 7:
-                    ((ViewItem)holder).tvText.setText("设计模式");
+                    ((ViewItem)holder).itemMainListBinding.tvText.setText("设计模式");
                     break;
                 case 8:
-                    ((ViewItem)holder).tvText.setText("依赖注入Dagger");
+                    ((ViewItem)holder).itemMainListBinding.tvText.setText("依赖注入Dagger");
                     break;
             }
 
-            ((ViewItem)holder).tvText.setOnClickListener(new View.OnClickListener() {
+            ((ViewItem)holder).itemMainListBinding.tvText.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     switch (position){
@@ -84,13 +92,13 @@ public class MainActivity extends AppCompatActivity {
                             gotoCustom();
                             break;
                         case 1:
-                            //gotoArch();
+                            gotoArch();
                             break;
                         case 2:
-                            //gotoAlgorithm();
+                            gotoAlgorithm();
                             break;
                         case 3:
-                            //gotoKotlin();
+                            gotoKotlin();
                             break;
                         case 4:
                             gotoSystem();
@@ -136,6 +144,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void gotoFlutter() {
+
+
+
+
+
+
+
+
         //todo
         Toast.makeText(this, "未实现！", Toast.LENGTH_SHORT).show();
     }
@@ -165,11 +181,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     class ViewItem extends RecyclerView.ViewHolder {
-        public TextView tvText;
-        public ViewItem(@NonNull View itemView) {
-            super(itemView);
-
-            tvText = itemView.findViewById(R.id.tvText);
+        public ItemMainListBinding itemMainListBinding;
+        public ViewItem(ItemMainListBinding itemMainListBinding) {
+            super(itemMainListBinding.getRoot());
+            this.itemMainListBinding = itemMainListBinding;
         }
     }
 }

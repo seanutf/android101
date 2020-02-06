@@ -32,7 +32,7 @@ public class ArchActivity extends BaseActivity {
     }
 
     private void initView() {
-        //优化
+        //优化,处理
         archBinding.tvText.setText("明天会更好");
     }
 }

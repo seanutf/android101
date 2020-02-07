@@ -20,7 +20,7 @@ public class ArchActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         archBinding = ActivityArchBinding.inflate(getLayoutInflater());
         setContentView(archBinding.getRoot());
-        //initView();
+        initView();
         model = new OrderViewModelFactory().create(MyViewModel.class);
 
         model.getUsers().observe(this, new Observer<List<User>>() {

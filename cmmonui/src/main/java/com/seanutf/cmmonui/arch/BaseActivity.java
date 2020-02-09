@@ -1,4 +1,4 @@
-package com.seanutf.cmmonui;
+package com.seanutf.cmmonui.arch;
 
 import android.os.Bundle;
 

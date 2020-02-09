@@ -6,7 +6,7 @@ import androidx.lifecycle.Observer;
 
 import com.seanutf.android.arch.data.User;
 import com.seanutf.android.databinding.ActivityArchBinding;
-import com.seanutf.cmmonui.BaseActivity;
+import com.seanutf.cmmonui.arch.BaseActivity;
 
 import java.util.List;
 

@@ -1,22 +1,19 @@
 package com.seanutf.android;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.ViewModel;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.seanutf.android.custom.CustomViewActivity;
+import com.seanutf.android.dagger.DaggerActivity;
 import com.seanutf.android.databinding.ActivityMainBinding;
 import com.seanutf.android.databinding.ItemMainListBinding;
-import com.seanutf.android.dagger.DaggerActivity;
-import com.seanutf.cmmonui.BaseActivity;
+import com.seanutf.cmmonui.arch.BaseActivity;
 
 public class MainActivity extends BaseActivity {
 

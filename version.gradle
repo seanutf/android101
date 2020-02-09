@@ -13,7 +13,7 @@ ext{
     daggerVersion = "2.25.4"
     daggerCompilerVersion = "2.25.4"
     lifecycleVersion = "2.2.0"
-    mmkvVersion = '1.0.16'
+    mmkvVersion = '1.0.23'
 
     //test
     junitVersion = "4.12"

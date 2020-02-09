@@ -35,4 +35,11 @@ dependencies {
     api "androidx.constraintlayout:constraintlayout:${rootProject.ext.constraintVersion}"
     api "androidx.recyclerview:recyclerview:${rootProject.ext.recyclerviewVersion}"
     api "com.google.android.material:material:${rootProject.ext.materialVersion}"
+
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.ext.lifecycleVersion"
+    implementation "android.arch.lifecycle:viewmodel:$rootProject.ext.lifecycleVersion"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$rootProject.ext.lifecycleVersion" // For Kotlin use kapt instead of annotationProcessor
+    // alternately - if using Java8, use the following instead of lifecycle-compiler
+    implementation "androidx.lifecycle:lifecycle-common-java8:$rootProject.ext.lifecycleVersion"
 }

@@ -33,10 +33,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    api "androidx.appcompat:appcompat:${rootProject.ext.appcompatVersion}"
+    implementation "androidx.appcompat:appcompat:${rootProject.ext.appcompatVersion}"
     api "com.google.dagger:dagger:${rootProject.ext.daggerVersion}"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     annotationProcessor "com.google.dagger:dagger-compiler:${rootProject.ext.daggerCompilerVersion}"
 
     testImplementation "junit:junit:${rootProject.ext.junitVersion}"
@@ -44,13 +42,6 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:${rootProject.ext.espressoVersion}"
 
     implementation project(':cmmonui')
-
-
-    // ViewModel and LiveData
-    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.ext.lifecycleVersion"
-    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$rootProject.ext.lifecycleVersion" // For Kotlin use kapt instead of annotationProcessor
-    // alternately - if using Java8, use the following instead of lifecycle-compiler
-    implementation "androidx.lifecycle:lifecycle-common-java8:$rootProject.ext.lifecycleVersion"
 
     //微信版本SharedPreferences
     implementation "com.tencent:mmkv:$rootProject.ext.mmkvVersion"

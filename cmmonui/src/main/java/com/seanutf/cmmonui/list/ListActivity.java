@@ -16,7 +16,6 @@ public class ListActivity extends BaseActivity {
         layoutBind = ActivityListBinding.inflate(getLayoutInflater());
         setContentView(layoutBind.getRoot());
 
-        //添加集合
         layoutBind.tvSvRv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

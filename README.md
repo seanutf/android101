@@ -21,4 +21,4 @@ android学习新阶段demo
 
 一些开发过程中遇到的还未了解的理解的好奇的点
 
-##1.Activity是加载并展示Fragment的
+## 1.Activity是加载并展示Fragment的

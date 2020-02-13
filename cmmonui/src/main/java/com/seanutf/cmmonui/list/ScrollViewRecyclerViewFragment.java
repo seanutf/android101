@@ -7,18 +7,18 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.seanutf.cmmonui.R;
 import com.seanutf.cmmonui.arch.BaseFragment;
 import com.seanutf.cmmonui.arch.BaseViewModel;
 
-public class List1Fragment extends BaseFragment {
+public class ScrollViewRecyclerViewFragment extends BaseFragment {
 
-    private List1ViewModel mViewModel;
+    public static final String TAG = ScrollViewRecyclerViewFragment.class.getSimpleName();
 
-    public static List1Fragment newInstance() {
-        return new List1Fragment();
+    public static ScrollViewRecyclerViewFragment newInstance() {
+        return new ScrollViewRecyclerViewFragment();
     }
 
     @Override
@@ -29,6 +29,6 @@ public class List1Fragment extends BaseFragment {
 
     @Override
     protected BaseViewModel generateViewModel() {
-        return ViewModelProviders.of(this).get(List1ViewModel.class);
+        return new ViewModelProvider(this).get(List1ViewModel.class);
     }
 }

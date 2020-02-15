@@ -12,9 +12,9 @@ import androidx.fragment.app.Fragment;
 
 import com.seanutf.cmmonui.R;
 
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment<T extends BaseViewModel> extends Fragment {
 
-    private BaseViewModel viewModel;
+    protected T viewModel;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -30,6 +30,6 @@ public abstract class BaseFragment extends Fragment {
         // TODO: Use the ViewModel
     }
 
-    protected abstract BaseViewModel generateViewModel();
+    protected abstract T generateViewModel();
 
 }

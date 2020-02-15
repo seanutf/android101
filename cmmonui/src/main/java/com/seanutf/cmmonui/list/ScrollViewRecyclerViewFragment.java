@@ -7,13 +7,15 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.seanutf.cmmonui.R;
 import com.seanutf.cmmonui.arch.BaseFragment;
-import com.seanutf.cmmonui.arch.BaseViewModel;
 
-public class ScrollViewRecyclerViewFragment extends BaseFragment {
+import java.util.List;
+
+public class ScrollViewRecyclerViewFragment extends BaseFragment<List1ViewModel> {
 
     public static final String TAG = ScrollViewRecyclerViewFragment.class.getSimpleName();
 
@@ -28,7 +30,18 @@ public class ScrollViewRecyclerViewFragment extends BaseFragment {
     }
 
     @Override
-    protected BaseViewModel generateViewModel() {
+    protected List1ViewModel generateViewModel() {
         return new ViewModelProvider(this).get(List1ViewModel.class);
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        viewModel.getSvData().observe(getViewLifecycleOwner(), new Observer<List<SvData>>() {
+            @Override
+            public void onChanged(List<SvData> svData) {
+
+            }
+        });
     }
 }

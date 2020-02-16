@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.core.widget.NestedScrollView;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.seanutf.cmmonui.arch.BaseFragment;
 import com.seanutf.cmmonui.databinding.List1FragmentBinding;
@@ -46,6 +47,8 @@ public class ScrollViewRecyclerViewFragment extends BaseFragment<List1ViewModel>
 
             }
         });
+
+        vb.rvList.setLayoutManager(new LinearLayoutManager(getActivity()));
     }
 
     @Override

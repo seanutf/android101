@@ -5,9 +5,16 @@
     android:layout_height="match_parent"
     tools:context=".list.ScrollViewRecyclerViewFragment">
 
-    <TextView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:id="@+id/scrollView">
+
+        <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+            android:id="@+id/rvList" />
+
+    </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>

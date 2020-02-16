@@ -7,18 +7,20 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.widget.NestedScrollView;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.seanutf.cmmonui.R;
 import com.seanutf.cmmonui.arch.BaseFragment;
+import com.seanutf.cmmonui.databinding.List1FragmentBinding;
 
 import java.util.List;
 
-public class ScrollViewRecyclerViewFragment extends BaseFragment<List1ViewModel> {
+public class ScrollViewRecyclerViewFragment extends BaseFragment<List1ViewModel> implements NestedScrollView.OnScrollChangeListener {
 
     public static final String TAG = ScrollViewRecyclerViewFragment.class.getSimpleName();
 
+    List1FragmentBinding vb;
     public static ScrollViewRecyclerViewFragment newInstance() {
         return new ScrollViewRecyclerViewFragment();
     }
@@ -26,7 +28,8 @@ public class ScrollViewRecyclerViewFragment extends BaseFragment<List1ViewModel>
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.list1_fragment, container, false);
+        vb = List1FragmentBinding.inflate(inflater);
+        return vb.getRoot();
     }
 
     @Override
@@ -43,5 +46,10 @@ public class ScrollViewRecyclerViewFragment extends BaseFragment<List1ViewModel>
 
             }
         });
+    }
+
+    @Override
+    public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+
     }
 }

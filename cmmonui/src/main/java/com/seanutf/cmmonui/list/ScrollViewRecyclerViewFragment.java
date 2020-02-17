@@ -44,7 +44,9 @@ public class ScrollViewRecyclerViewFragment extends BaseFragment<List1ViewModel>
         viewModel.getSvData().observe(getViewLifecycleOwner(), new Observer<List<SvData>>() {
             @Override
             public void onChanged(List<SvData> svData) {
-
+                if (svData != null) {
+                    String id = svData.get(0).tag;
+                }
             }
         });
 

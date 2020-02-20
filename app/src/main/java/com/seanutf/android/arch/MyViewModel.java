@@ -16,7 +16,7 @@ public class MyViewModel extends ViewModel {
         this.i = i;
     }
 
-    private MutableLiveData<List<User>> users; //todo MutableLiveData
+    private MutableLiveData<List<User>> users;
 
     public LiveData<List<User>> getUsers() {
         if (users == null) {

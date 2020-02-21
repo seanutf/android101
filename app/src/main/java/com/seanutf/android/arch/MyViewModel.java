@@ -19,10 +19,10 @@ public class MyViewModel extends ViewModel {
     private MutableLiveData<List<User>> users;
 
     public LiveData<List<User>> getUsers() {
-        if (users == null) {
-            users = new MutableLiveData<List<User>>();
-            loadUsers();
-        }
+//        if (users == null) {
+//            users = new MutableLiveData<List<User>>();
+//            loadUsers();
+//        }
         return users;
     }
 

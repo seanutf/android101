@@ -1,4 +1,7 @@
 apply plugin: 'com.android.dynamic-feature'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
 
 android {
     compileSdkVersion rootProject.ext.compileVersion
@@ -7,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion rootProject.ext.minVersion
         targetSdkVersion rootProject.ext.targetVersion
-        versionCode rootProject.ext.appVersionCode
-        versionName rootProject.ext.appVersionName
+        versionCode rootProject.ext.appVersionCode as Integer
+        versionName rootProject.ext.appVersionName as String
 
     }
     buildToolsVersion = rootProject.ext.buildVersion
@@ -24,4 +27,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':app')
     implementation project(path: ':cmmonui')
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

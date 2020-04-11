@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion rootProject.ext.compileVersion
@@ -7,8 +9,8 @@ android {
         applicationId "com.seanutf.android"
         minSdkVersion rootProject.ext.minVersion
         targetSdkVersion rootProject.ext.targetVersion
-        versionCode rootProject.ext.appVersionCode
-        versionName rootProject.ext.appVersionName
+        versionCode rootProject.ext.appVersionCode as Integer
+        versionName rootProject.ext.appVersionName as String
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -41,9 +43,14 @@ dependencies {
     androidTestImplementation "androidx.test:runner:${rootProject.ext.testRunnerVersion}"
     androidTestImplementation "androidx.test.espresso:espresso-core:${rootProject.ext.espressoVersion}"
 
-    implementation project(':cmmonui')
+    implementation project(':base')
 
     //微信版本SharedPreferences
     implementation "com.tencent:mmkv:$rootProject.ext.mmkvVersion"
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+}
+repositories {
+    mavenCentral()
 }

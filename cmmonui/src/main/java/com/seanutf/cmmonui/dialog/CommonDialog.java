@@ -127,9 +127,9 @@ public class CommonDialog extends Dialog {
         }
 
         public CommonDialog show() {
-            CommonDialog wwDialog = create();
-            wwDialog.show();
-            return wwDialog;
+            CommonDialog dialog = create();
+            dialog.show();
+            return dialog;
 
         }
 

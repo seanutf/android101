@@ -1,4 +1,4 @@
-package com.wanwu.wanwu.common.util
+package com.seanutf.cmmonui.anim;
 
 import android.animation.Animator
 import android.view.View

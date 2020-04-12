@@ -57,4 +57,14 @@ public class ScrollViewRecyclerViewFragment extends BaseFragment<List1ViewModel>
     public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
 
     }
+
+    @Override
+    protected void handle() {
+
+    }
+
+    @Override
+    protected void setViews(@Nullable Bundle savedInstanceState) {
+
+    }
 }

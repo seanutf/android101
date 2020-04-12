@@ -1,4 +1,4 @@
-package com.seanutf.android;
+package com.seanutf.android.main;
 
 import android.os.Bundle;
 import android.view.View;

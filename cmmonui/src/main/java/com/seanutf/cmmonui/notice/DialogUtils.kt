@@ -1,6 +1,6 @@
 @file:JvmName("DialogUtils")
 
-package com.wanwu.wanwu.common.util
+package com.seanutf.cmmonui.notice
 
 import android.app.Activity
 import android.content.DialogInterface

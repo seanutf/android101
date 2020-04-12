@@ -46,13 +46,13 @@ public class FileUtils {
 
         String state = Environment.getExternalStorageState();
         File rootDir = state.equals(Environment.MEDIA_MOUNTED) ? Environment.getExternalStorageDirectory() : CommonUtilApp.instance.getCacheDir();
-        return rootDir.getAbsolutePath() + "/bonbon/wanwu/";
+        return rootDir.getAbsolutePath() + "/bonbon/seanutf/";
     }
 
     public static String getMaterialDir() {
         String state = Environment.getExternalStorageState();
         File rootDir = state.equals(Environment.MEDIA_MOUNTED) ? Environment.getExternalStorageDirectory() : CommonUtilApp.instance.getCacheDir();
-        return rootDir.getAbsolutePath() + "/Pictures/wanwu/";
+        return rootDir.getAbsolutePath() + "/Pictures/seanutf/";
     }
 
     public static String getPicturesDir() {

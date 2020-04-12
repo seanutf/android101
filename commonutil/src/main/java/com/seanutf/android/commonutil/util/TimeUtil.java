@@ -174,7 +174,7 @@ public class TimeUtil {
         return times;
     }
 
-    public static String bbtTimeAgo(long timestamp) {
+    public static String firendTimeAgo(long timestamp) {
 
         long curStamp = System.currentTimeMillis() / 1000;
         long delta = curStamp - timestamp;

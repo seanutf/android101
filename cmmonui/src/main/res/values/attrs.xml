@@ -31,4 +31,10 @@
         <attr name="showTipAfterExpand" format="boolean" />
         <attr name="isSetParentClick" format="boolean" />
     </declare-styleable>
+
+    <declare-styleable name="CollapsibleTextView">
+        <attr name="collapsedLines" format="integer" />
+        <attr name="collapsedText" format="string" />
+        <attr name="expandedText" format="string" />
+    </declare-styleable>
 </resources>

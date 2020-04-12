@@ -8,7 +8,6 @@ import com.tencent.mmkv.MMKV;
 
 /**
  * Created by Sean on 2020-01-12.
- * 因组件化替代原BBTSettings类，与原有类完全一致
  * 新增的用户设定可在本类中进行
  */
 public class AppSettings {

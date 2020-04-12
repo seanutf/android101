@@ -50,7 +50,7 @@ public class AppUtil {
     }
 
 
-    public static int systemTimeForBBT() {
+    public static int systemTimeForMinute() {
         long ts = System.currentTimeMillis();
         return (int) (ts / 1000);
     }

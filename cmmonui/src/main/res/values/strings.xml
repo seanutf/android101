@@ -49,6 +49,7 @@
     <string name="app_verify">验证</string>
     <string name="app_warning">警告</string>
     <string name="app_del">删除</string>
+    <string name="app_text_full">全文</string>
     <string name="app_back">返回</string>
     <string name="app_comment">评论</string>
     <string name="app_reply">回复</string>

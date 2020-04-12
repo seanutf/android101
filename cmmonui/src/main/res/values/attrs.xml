@@ -37,4 +37,39 @@
         <attr name="collapsedText" format="string" />
         <attr name="expandedText" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="FlowLayoutAttrs">
+        <attr name="horizontalSpacing" format="dimension" />
+        <attr name="verticalSpacing" format="dimension" />
+        <attr name="itemSize" format="dimension" />
+        <attr name="itemColor" format="reference|color" />
+        <attr name="backgroundResource" format="reference|color" />
+        <attr name="textPaddingH" format="dimension" />
+        <attr name="textPaddingV" format="dimension" />
+    </declare-styleable>
+
+    <!--密码框-->
+    <declare-styleable name="PwdInputView">
+        <attr name="maxCount" format="integer" />
+        <attr name="circleColor" format="color" />
+        <attr name="bottomLineColor" format="color" />
+        <attr name="radius" format="dimension" />
+        <attr name="divideLineWidth" format="dimension" />
+        <attr name="divideLineColor" format="color" />
+        <attr name="rectAngle" format="dimension" />
+        <attr name="focusedColor" format="color" />
+        <attr name="pwdType" format="enum">
+            <enum name="rect" value="0" />
+            <enum name="bottomLine" value="1" />
+        </attr>
+    </declare-styleable>
+    <!--SmoothCheckBox-->
+    <declare-styleable name="SmoothCheckBox">
+        <attr name="duration" format="integer" />
+        <attr name="stroke_width" format="dimension" />
+        <attr name="color_tick" format="color" />
+        <attr name="color_checked" format="color" />
+        <attr name="color_unchecked" format="color" />
+        <attr name="color_unchecked_stroke" format="color" />
+    </declare-styleable>
 </resources>

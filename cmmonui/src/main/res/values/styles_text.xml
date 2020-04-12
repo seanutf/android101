@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="tv_Base">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="tv_important" parent="@style/tv_Base">
+        <item name="android:textColor">@color/color_font_important</item>
+    </style>
+
+    <style name="tv_17_important" parent="@style/tv_important">
+        <item name="android:textSize">@dimen/font_17</item>
+    </style>
+
+    <style name="tv_15_important" parent="@style/tv_important">
+        <item name="android:textSize">@dimen/font_15</item>
+    </style>
+
+    <style name="tv_15_ffffff" parent="@style/tv_Base">
+        <item name="android:textColor">@color/app_color_ffffff_100</item>
+        <item name="android:textSize">@dimen/font_15</item>
+    </style>
+</resources>

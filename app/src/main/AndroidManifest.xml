@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.seanutf.android">
 
     <application
         android:allowBackup="true"
+        android:name=".SquareApp"
+        tools:replace="android:name"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -19,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".main.MainActivity" />
+        <activity android:name=".homewiki.HomeWikiActivity" />
         <activity android:name=".custom.CustomViewActivity" />
     </application>
 

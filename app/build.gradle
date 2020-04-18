@@ -13,6 +13,12 @@ android {
         versionName rootProject.ext.appVersionName as String
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField "int", "LAUNCH_ENVIRONMNET", "${rootProject.ext.launchEnvironment}"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
 
     viewBinding {
@@ -32,6 +38,11 @@ android {
         sourceCompatibility 1.8
         targetCompatibility 1.8
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -50,6 +61,8 @@ dependencies {
     implementation "com.tencent:mmkv:$rootProject.ext.mmkvVersion"
     implementation "androidx.core:core-ktx:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api 'com.alibaba:arouter-api:1.5.0'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
 
 }
 repositories {

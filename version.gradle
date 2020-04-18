@@ -43,6 +43,20 @@ def getAppEnvironment() {
     return environment
 }
 
+def getLaunchEnvironment() {
+    def Properties props = new Properties()
+    def propFile = file('./version.properties')   //pay attention to the path
+    def environment = 1
+    if (propFile.canRead()) {
+        props.load(new FileInputStream(propFile))
+
+        if (props != null && props.containsKey('launch.environment')) {
+            environment = props['launch.environment']
+        }
+    }
+    return environment
+}
+
 ext{
 
     /**
@@ -91,6 +105,7 @@ ext{
     appVersionName = getAppVersionName()
     appVersionCode = getAppVersionCode()
     currentEnvironment = getAppEnvironment()
+    launchEnvironment = getLaunchEnvironment()
 
 
 }

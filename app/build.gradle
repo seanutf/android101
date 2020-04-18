@@ -12,6 +12,7 @@ android {
         versionCode rootProject.ext.appVersionCode as Integer
         versionName rootProject.ext.appVersionName as String
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "int", "LAUNCH_ENVIRONMNET", "${rootProject.ext.launchEnvironment}"
     }
 
     viewBinding {

@@ -1,5 +1,6 @@
 package com.seanutf.android.main;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,10 @@ import com.seanutf.cmmonui.arch.BaseActivity;
 public class MainActivity extends BaseActivity {
 
     ActivityMainBinding activityBind;
+
+    public static void startActivity(Context context) {
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -17,5 +17,8 @@ public class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
     }
 
+    protected void finishActivity() {
+        finish();
+    }
 
 }

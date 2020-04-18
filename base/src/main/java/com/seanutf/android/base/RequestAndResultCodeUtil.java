@@ -16,23 +16,6 @@ public class RequestAndResultCodeUtil {
 
     //==========================  请求码  =======================================//
     /**
-     * 请求打开直播设置页面
-     */
-    public static final int REQ_OPEN_LIVE_SETTINGS = 10296;
-    /**
-     * 订单确认页面请求选择品牌券页面
-     */
-    public static final int REQ_SELECT_BRAND_COUPON = 10297;
-
-    /**
-     * 打开设置页
-     */
-    public static final int REQ_USER_SETTING = 10298;
-    /**
-     * 请求设置微信名片
-     */
-    public static final int REQ_SET_MY_WE_CHAT_CARD = 10299;
-    /**
      * 请求系统相机录视频的功能
      */
     public static final int REQ_TAKE_VIDEO_BY_SYSTEM = 10300;
@@ -43,19 +26,14 @@ public class RequestAndResultCodeUtil {
     public static final int REQ_TAKE_VIDEO_BY_APP = 10301;
 
     /**
-     * 请求更新社群介绍
-     */
-    public static final int REQ_UPDATE_SOCIAL_DESC = 10302;
-    /**
-     * 请求更新社群名称
-     */
-    public static final int REQ_UPDATE_SOCIAL_NAME = 10303;
-
-    /**
      * 请求裁剪图片
      */
     public static final int REQ_MEDIA_IMG_CROP = 10304;
 
+    /**
+     * 请求选择媒体
+     */
+    public static final int REQ_SELECT_MEDIA = 10309;
 
     /**
      * 请求编辑裁剪视频
@@ -75,94 +53,7 @@ public class RequestAndResultCodeUtil {
      * 发布过程中请求预览大图
      */
     public static final int REQ_PREVIEW_TO_POST = 10308;
-
-
-    /**
-     * 请求获取特定类型的消息列表
-     */
-    public static final int REQ_SELECT_MEDIA = 10309;
-
-
-    /**
-     * 请求获取特定类型的消息列表
-     */
-    public static final int REQ_GET_MSG_TYPE_LIST = 10310;
-
-    /**
-     * 选择图片
-     */
-    public static final int REQ_SELECT_PIC = 10311;
-
-    /**
-     * 确认订单页面支付成功
-     */
-    public static final int REQ_ORDER_ADDRESS_LIST = 10312;
-
-    /**
-     * 确认订单页面支付成功
-     */
-    public static final int REQ_ORDER_PAY_SUCCESS = 10313;
-    /**
-     * 确认订单页面添加地址
-     */
-    public static final int REQ_ORDER_ADD_ADDR = 10314;
-    /**
-     * 确认订单页面更改地址
-     */
-    public static final int REQ_ORDER_UPDATE_ADDR = 10315;
-
-    /**
-     * 编辑店铺微信
-     */
-    public static final int REQ_SELECT_COUPON = 10316;
-
-    /**
-     * 编辑店铺微信
-     */
-    public static final int REQ_STORE_UPDATE_WECHAT = 10317;
-
-    /**
-     * 编辑店铺简介
-     */
-    public static final int REQ_STORE_UPDATE_INTRO = 10318;
-
-    /**
-     * 编辑店铺名称
-     */
-    public static final int REQ_STORE_UPDATE_NAME = 10319;
-    /**
-     * 编辑个人资料
-     */
-    public static final int REQ_EDIT_PROFILE = 10320;
-    /**
-     * 编辑昵称
-     */
-    public static final int REQ_EDIT_NICK = 10321;
-    /**
-     * 选择头像
-     */
-    public static final int REQ_SELECT_AVATAR = 10322;
-    /**
-     * 编辑个人介绍
-     */
-    public static final int REQ_EDIT_INTRODUCTION = 10323;
-
     //==========================  请求码  =======================================//
     //==========================  结果码  =======================================//
-    /**
-     * 订单确认页面对地址的更改
-     */
-    public static final int RES_ORDER_UPDATE_ADDRESS_OK = 10323;
-    public static final int RES_ORDER_UPDATE_ADDRESS_CANCEL = 10324;
-
-    /**
-     * 订单确认页面支付成功
-     */
-    public static final int RES_ORDER_PAY_ACTIVITY_OK = 10325;
-
-    /**
-     * 粉丝列表关注和非关注的通知
-     */
-    public static final int RES_FANSLIST_DOSOMETHING = 10326;
     //==========================  结果码  =======================================//
 }

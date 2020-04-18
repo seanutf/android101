@@ -64,4 +64,10 @@
     <string name="app_test_text_middle">这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本</string>
     <string name="app_test_text_long">这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本</string>
     <string name="text_copy_result_ok">已复制到剪切板</string>
+
+    <string name="click_load_more">点击加载更多</string>
+    <string name="no_more_data">没有更多啦</string>
+    <string name="no_data">没有更多啦</string>
+    <string name="loading_fail">加载失败，点击重试</string>
+    <string name="loading">@string/app_progress_bar_msg</string>
 </resources>

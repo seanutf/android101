@@ -336,7 +336,7 @@ public class DefaultMediaSelectActivity extends BaseMediaSelectActivity {
 
         isShowPopup(true);
 
-        popupWindow.showAsDropDown(null, 0, 0);
+        popupWindow.showAsDropDown(vb.llTitle, 0, 0);
         popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override
             public void onDismiss() {

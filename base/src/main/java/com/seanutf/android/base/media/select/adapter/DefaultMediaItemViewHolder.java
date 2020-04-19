@@ -17,6 +17,7 @@ import com.seanutf.cmmonui.widget.imageview.SquareImageView;
  */
 public class DefaultMediaItemViewHolder extends RecyclerView.ViewHolder {
     SquareImageView ivPhoto;
+    //ImageView ivPhoto;
     TextView tvVideoDuration;
     TextView tvSelectNum;
     View videoTag;

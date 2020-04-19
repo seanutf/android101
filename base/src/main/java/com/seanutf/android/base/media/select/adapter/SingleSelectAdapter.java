@@ -63,6 +63,9 @@ public class SingleSelectAdapter extends BaseMediaSelectAdapter {
                     ((DefaultMediaItemViewHolder) holder).videoTag.setVisibility(View.VISIBLE);
                     ((DefaultMediaItemViewHolder) holder).llSelectNum.setVisibility(View.GONE);
                 } else {
+                    ((DefaultMediaItemViewHolder) holder).ivPhoto.getLayoutParams().width = itemImgWidth;
+                    ((DefaultMediaItemViewHolder) holder).ivPhoto.getLayoutParams().height = itemImgWidth;
+                    ((DefaultMediaItemViewHolder) holder).ivPhoto.requestLayout();
                     ImageLoader.loadImage(getContext(), mediaItem.mediaPath, ((DefaultMediaItemViewHolder) holder).ivPhoto);
                     ((DefaultMediaItemViewHolder) holder).tvVideoDuration.setVisibility(View.INVISIBLE);
                     ((DefaultMediaItemViewHolder) holder).videoTag.setVisibility(View.INVISIBLE);

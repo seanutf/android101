@@ -1,1 +1,8 @@
-<manifest package="com.seanutf.android.base" />
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.seanutf.android.base">
+
+    <application>
+        <activity android:name=".media.select.DefaultMediaSelectActivity" />
+    </application>
+</manifest>

@@ -34,10 +34,10 @@ public abstract class BaseFragment<T extends BaseViewModel> extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         if (customLayout) {
-            return getCustomLayout();
+            return getCustomLayout(inflater, container, savedInstanceState);
         } else {
             baseVb = BaseFragmentBinding.inflate(inflater, container, false);
-            baseVb.llContent.addView(getContentLayout());
+            baseVb.llContent.addView(getContentLayout(inflater, (ViewGroup) baseVb.getRoot(), savedInstanceState));
             return baseVb.getRoot();
         }
     }
@@ -68,7 +68,8 @@ public abstract class BaseFragment<T extends BaseViewModel> extends Fragment {
      * 且子类不需要关注标题栏的具体实现，只需要关注标题栏的显示内容即可
      * 配合{@link BaseContentFragment}使用
      */
-    protected View getContentLayout() {
+    protected View getContentLayout(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                                    @Nullable Bundle savedInstanceState) {
         return null;
     }
 
@@ -77,13 +78,14 @@ public abstract class BaseFragment<T extends BaseViewModel> extends Fragment {
      * 且子类需要关注标题栏的具体实现和显示内容
      * 配合{@link BaseCustomFragment}使用
      */
-    protected View getCustomLayout() {
+    protected View getCustomLayout(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                                   @Nullable Bundle savedInstanceState) {
         return null;
     }
 
     /**
      * 子类复写，标志子类是否需要全部自定义
-     * 配合{@link #getCustomLayout()} 使用
+     * 配合{@link #getCustomLayout(LayoutInflater, ViewGroup, Bundle)} 使用
      * 同时一般情况下，开发者不需要重写本方法，
      * 有默认实现的{@link BaseCustomFragment}
      * 继承该类即可
@@ -94,7 +96,7 @@ public abstract class BaseFragment<T extends BaseViewModel> extends Fragment {
 
     /**
      * 子类复写，标志子类是否需要默认的标题栏
-     * 配合{@link #getContentLayout()} 使用
+     * 配合{@link #getContentLayout(LayoutInflater, ViewGroup, Bundle)} 使用
      * 同时一般情况下，开发者不需要重写本方法，
      * 有默认实现的{@link BaseContentFragment}
      * 继承该类即可

@@ -26,8 +26,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".main.MainActivity" />
-        <activity android:name=".homewiki.HomeWikiActivity" />
         <activity android:name=".custom.CustomViewActivity" />
+        <activity android:name=".homewiki.list.HomeWikiListActivity" />
+        <activity android:name=".homewiki.detail.HomeWikiDetailActivity" />
+        <activity android:name=".homewiki.post.HomeWikiPostActivity" />
+        <activity android:name=".homewiki.post.HomeWikiTagListActivity" />
     </application>
 
 </manifest>

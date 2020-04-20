@@ -18,6 +18,7 @@ public class AppSettings {
     private static final String PHONE_DEVICE_ID = "phone_device_id";
     private static final String MANAGER_ID = "manager_id";
     private static final String APP_NOTCH_HEIGHT = "app_notch_height";
+    private static final String HOME_WIKI_POST_SORT = "HOME_WIKI_POST_SORT";
 
 
     private static AppSettings instance;
@@ -145,4 +146,11 @@ public class AppSettings {
     }
 
 
+    public void setWikiPostSort(int sortId) {
+        putInt(HOME_WIKI_POST_SORT, sortId);
+    }
+
+    public int getWikiPostSort() {
+        return getInt(HOME_WIKI_POST_SORT);
+    }
 }

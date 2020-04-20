@@ -1,6 +1,6 @@
 package com.seanutf.android.base.homwiki.data;
 
-public class Sort {
+public class Tag {
     public int id;
     public String name;
 }

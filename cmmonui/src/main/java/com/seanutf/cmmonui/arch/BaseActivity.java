@@ -1,6 +1,7 @@
 package com.seanutf.cmmonui.arch;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +18,16 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        init(savedInstanceState, null);
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
+        super.onCreate(savedInstanceState, persistentState);
+        init(savedInstanceState, persistentState);
+    }
+
+    private void init(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         ARouter.getInstance().inject(this);
     }
 

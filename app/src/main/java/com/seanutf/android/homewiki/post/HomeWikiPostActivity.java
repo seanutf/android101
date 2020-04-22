@@ -6,6 +6,7 @@ import android.os.PersistableBundle;
 import android.view.View;
 
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.seanutf.android.base.homwiki.data.Tag;
 import com.seanutf.android.base.homwiki.data.WikiData;
@@ -85,6 +86,9 @@ public class HomeWikiPostActivity extends BaseActivity {
                 HomeWikiTagListActivity.startActivity(HomeWikiPostActivity.this);
             }
         });
+
+        vb.rvList.setLayoutManager(new GridLayoutManager(this, 4));
+        vb.rvList.setAdapter(new WikiPostMediaListAdapter(this));
     }
 
     private void checkPost() {

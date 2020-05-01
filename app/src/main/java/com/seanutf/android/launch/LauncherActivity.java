@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -15,6 +16,9 @@ import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.seanutf.android.base.router.LauncherService;
 import com.seanutf.android.utils.AppContext;
 import com.seanutf.cmmonui.arch.BaseActivity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.seanutf.android.base.router.RouterPathConstant.SERVICE_APP_LAUNCHER;
 
@@ -28,7 +32,51 @@ public class LauncherActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //testCountList();
         checkPermissions();
+    }
+
+    private void testCountList() {
+        List<String> strList = new ArrayList<>();
+        strList.add("1");
+        strList.add("2");
+        strList.add("3");
+        strList.add("4");
+        strList.add("5");
+        strList.add("6");
+        strList.add("7");
+
+        for (int i = 0; i < strList.size(); i++) {
+            Log.d("ListSubTest", "the strList has ele in " + i + " is " + strList.get(i));
+        }
+
+        List<String> subList1 = strList.subList(0, 3);
+        if (subList1 instanceof ArrayList) {
+            Log.d("ListSubTest", "the subList1 is ArrayList");
+        } else {
+            Log.d("ListSubTest", "the subList1 is not ArrayList");
+        }
+
+        strList.subList(0, 3).clear();
+
+        if (strList instanceof ArrayList) {
+            Log.d("ListSubTest", "the strList is ArrayList");
+        } else {
+            Log.d("ListSubTest", "the strList is not ArrayList");
+        }
+
+        if (strList != null) {
+            Log.d("ListSubTest", "the strList is not null");
+            Log.d("ListSubTest", "the strList size is :" + strList.size());
+            if (strList.size() > 0) {
+                for (int i = 0; i < strList.size(); i++) {
+                    Log.d("ListSubTest", "the strList sub has ele in " + i + " is " + strList.get(i));
+                }
+            }
+        } else {
+            Log.d("ListSubTest", "the strList is null");
+        }
+
     }
 
     protected void checkPermissions() {
@@ -72,8 +120,11 @@ public class LauncherActivity extends BaseActivity {
         if (AppContext.isLaunchMain()) {
             launcherService.openMainUI();
             finishActivity();
-        } else {
+        } else if (AppContext.isLaunchWiki()) {
             launcherService.openWikiUI();
+            finishActivity();
+        } else {
+            launcherService.openTestUI();
             finishActivity();
         }
     }

@@ -7,4 +7,6 @@ public interface LauncherService extends IProvider {
     void openMainUI();
 
     void openWikiUI();
+
+    void openTestUI();
 }

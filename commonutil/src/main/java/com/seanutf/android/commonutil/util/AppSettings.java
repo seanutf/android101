@@ -19,6 +19,7 @@ public class AppSettings {
     private static final String MANAGER_ID = "manager_id";
     private static final String APP_NOTCH_HEIGHT = "app_notch_height";
     private static final String HOME_WIKI_POST_SORT = "HOME_WIKI_POST_SORT";
+    private static final String APP_TEST_OPEN_ID = "APP_TEST_OPEN_ID";
 
 
     private static AppSettings instance;
@@ -153,4 +154,13 @@ public class AppSettings {
     public int getWikiPostSort() {
         return getInt(HOME_WIKI_POST_SORT);
     }
+
+    public void setTestOpenId(int openId) {
+        putInt(HOME_WIKI_POST_SORT, openId);
+    }
+
+    public int getTestOpenId() {
+        return getInt(HOME_WIKI_POST_SORT);
+    }
+
 }

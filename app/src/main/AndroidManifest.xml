@@ -31,6 +31,8 @@
         <activity android:name=".homewiki.detail.HomeWikiDetailActivity" />
         <activity android:name=".homewiki.post.HomeWikiPostActivity" />
         <activity android:name=".homewiki.post.HomeWikiTagListActivity" />
+        <activity android:name="com.seanutf.android.test.Test1Activity" />
+        <activity android:name="com.seanutf.android.test.Test2Activity" />
     </application>
 
 </manifest>

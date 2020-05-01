@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.seanutf.android.base.test", appContext.getPackageName());
+        assertEquals("com.seanutf.android.test", appContext.getPackageName());
     }
 }

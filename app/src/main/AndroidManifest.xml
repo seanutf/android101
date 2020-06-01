@@ -1,24 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.seanutf.android">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
+        android:name=".SquareApp"
+        tools:replace="android:name"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".arch.ArchActivity"></activity>
         <activity android:name=".dagger.DaggerActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".launch.LauncherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".main.MainActivity" />
         <activity android:name=".custom.CustomViewActivity" />
+        <activity android:name=".homewiki.list.HomeWikiListActivity" />
+        <activity android:name=".homewiki.detail.HomeWikiDetailActivity" />
+        <activity android:name=".homewiki.post.HomeWikiPostActivity" />
+        <activity android:name=".homewiki.post.HomeWikiTagListActivity" />
+        <activity android:name="com.seanutf.android.test.Test1Activity" />
+        <activity android:name="com.seanutf.android.test.Test2Activity" />
     </application>
 
 </manifest>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/app_color_aaaaaa"
+    android:orientation="vertical">
+
+    <com.seanutf.cmmonui.widget.imageview.SquareImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop" />
+
+    <!--  视频时长  -->
+    <TextView
+        android:id="@+id/tvVideoDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/ivPhoto"
+        android:layout_alignBottom="@id/ivPhoto"
+        android:layout_marginLeft="@dimen/distance_5"
+        android:layout_marginBottom="@dimen/distance_4"
+        android:textColor="@color/app_color_ffffff_100"
+        android:textSize="@dimen/font_12"
+        android:paddingBottom="@dimen/distance_1"
+        android:drawableLeft="@drawable/ic_media_list_video_tag"
+        android:drawablePadding="@dimen/distance_3"
+        android:visibility="invisible" />
+
+    <!--  视频底部渐变遮罩  -->
+    <View
+        android:id="@+id/videoTag"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_20"
+        android:layout_alignLeft="@id/ivPhoto"
+        android:layout_alignBottom="@id/ivPhoto"
+        android:background="@drawable/shape_bg_gradient_000000_80000000"
+        android:visibility="invisible" />
+
+    <!-- 右上角选中btn  -->
+    <LinearLayout
+        android:id="@+id/llSelectNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:id="@+id/tvSelectNum"
+            android:layout_width="@dimen/distance_25"
+            android:layout_height="@dimen/distance_25"
+            android:layout_marginLeft="@dimen/distance_10"
+            android:layout_marginTop="@dimen/distance_10"
+            android:layout_marginRight="@dimen/distance_10"
+            android:layout_marginBottom="@dimen/distance_10"
+            android:background="@drawable/ic_media_photo_unselect"
+            android:gravity="center"
+            tools:text="4"
+            android:includeFontPadding="false"
+            android:textColor="@color/app_color_font_ffffff"
+            android:textSize="@dimen/font_16" />
+    </LinearLayout>
+
+    <!--  不可选中遮罩  -->
+    <com.seanutf.cmmonui.widget.imageview.SquareImageView
+        android:id="@+id/ivUnSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@color/app_color_000000_40"
+        android:visibility="gone" />
+
+</RelativeLayout>

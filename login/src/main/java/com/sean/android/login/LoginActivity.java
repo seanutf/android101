@@ -1,10 +1,8 @@
 package com.sean.android.login;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-import com.seanutf.cmmonui.BaseActivity;
+import com.seanutf.cmmonui.arch.BaseActivity;
 
 public class LoginActivity extends BaseActivity {
 

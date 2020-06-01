@@ -1,26 +1,28 @@
-package com.seanutf.android;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.ViewModel;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+package com.seanutf.android.main;
 
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.seanutf.android.custom.CustomViewActivity;
+import com.seanutf.android.dagger.DaggerActivity;
 import com.seanutf.android.databinding.ActivityMainBinding;
 import com.seanutf.android.databinding.ItemMainListBinding;
-import com.seanutf.android.dagger.DaggerActivity;
-import com.seanutf.cmmonui.BaseActivity;
+import com.seanutf.cmmonui.arch.BaseActivity;
 
+import static com.seanutf.android.base.router.RouterPathConstant.UI_APP_MAIN;
+
+@Route(path = UI_APP_MAIN)
 public class MainActivity extends BaseActivity {
 
     ActivityMainBinding activityBind;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +50,6 @@ public class MainActivity extends BaseActivity {
             ItemMainListBinding itemMainListBinding = ItemMainListBinding.inflate(getLayoutInflater(),parent, false);
             return new ViewItem(itemMainListBinding);
         }
-
 
 
         @Override
@@ -122,7 +123,6 @@ public class MainActivity extends BaseActivity {
         }
 
 
-
         @Override
         public int getItemCount() {
             return 9;
@@ -144,12 +144,6 @@ public class MainActivity extends BaseActivity {
     }
 
     private void gotoFlutter() {
-
-
-
-
-
-
 
 
         //todo
@@ -182,6 +176,7 @@ public class MainActivity extends BaseActivity {
 
     class ViewItem extends RecyclerView.ViewHolder {
         public ItemMainListBinding itemMainListBinding;
+
         public ViewItem(ItemMainListBinding itemMainListBinding) {
             super(itemMainListBinding.getRoot());
             this.itemMainListBinding = itemMainListBinding;

@@ -1,0 +1,5 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.seanutf.android.commonutil">
+
+    <application android:name=".CommonUtilApp" />
+</manifest>

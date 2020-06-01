@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion rootProject.ext.compileVersion
@@ -8,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion rootProject.ext.minVersion
         targetSdkVersion rootProject.ext.targetVersion
-        versionCode rootProject.ext.appVersionCode
-        versionName rootProject.ext.appVersionName
+        versionCode rootProject.ext.appVersionCode as Integer
+        versionName rootProject.ext.appVersionName as String
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
@@ -31,6 +33,11 @@ dependencies {
     testImplementation "junit:junit:${rootProject.ext.junitVersion}"
     androidTestImplementation "androidx.test:runner:${rootProject.ext.testRunnerVersion}"
     androidTestImplementation "androidx.test.espresso:espresso-core:${rootProject.ext.espressoVersion}"
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 //    implementation "com.android.tools.lint:lint-api:26.5.3"
 //    implementation "com.android.tools.lint:lint-checks:26.5.3"
+}
+repositories {
+    mavenCentral()
 }

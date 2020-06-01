@@ -1,12 +1,12 @@
 package com.seanutf.android.dagger;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.seanutf.android.R;
-import com.seanutf.cmmonui.BaseActivity;
+import com.seanutf.cmmonui.arch.BaseActivity;
 
 public class DaggerActivity extends BaseActivity {
 

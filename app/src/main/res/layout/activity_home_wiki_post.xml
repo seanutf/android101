@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/llPost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvBtnPost"
+        android:layout_gravity="right"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="@color/app_color_font_f95555"
+        android:textColor="@color/app_color_ffffff_100"
+        android:text="发送" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/etPostTitle"
+                android:background="@null"
+                android:textColor="@color/app_color_111111_100"
+                android:hint="输入你想保存的标题吧～"
+                android:gravity="left"
+                android:padding="10dp"
+                android:textColorHint="@color/app_color_aaaaaa"
+                android:textSize="16sp" />
+
+            <View
+                android:background="@color/app_color_eeeeee"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/etPost"
+                android:background="@null"
+                android:textColor="@color/app_color_111111_100"
+                android:hint="输入你想保存的内容吧～"
+                android:gravity="left"
+                android:padding="10dp"
+                android:textColorHint="@color/app_color_aaaaaa"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/tvTags" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/tvBtnAddMedia"
+                android:textColor="@color/app_color_aaaaaa"
+                android:textSize="16sp"
+                android:text="添加图片"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rvList" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

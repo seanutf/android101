@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.seanutf.android.base.media.select.DefaultMediaSelectActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50">
+
+        <TextView
+            android:id="@+id/tvBtnBack"
+            android:layout_width="@dimen/distance_77"
+            android:layout_height="@dimen/distance_44"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_15"
+            android:gravity="left|center_vertical"
+            android:maxLength="16"
+            android:maxLines="1"
+            android:text="@string/app_cancel"
+            android:textColor="@color/app_color_font_111111"
+            android:textSize="@dimen/font_16" />
+
+        <LinearLayout
+            android:id="@+id/llTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/tvAlbumName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="16"
+                android:maxLines="1"
+                android:text="所有图片"
+                android:textColor="@color/app_color_font_111111"
+                android:textSize="@dimen/font_16" />
+
+            <ImageView
+                android:id="@+id/icAlbumState"
+                android:layout_width="@dimen/distance_10"
+                android:layout_height="@dimen/distance_5"
+                android:layout_marginLeft="@dimen/distance_4"
+                android:src="@drawable/arrow_down_icon" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvBtnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/distance_27"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/distance_15"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:text="下一步"
+            android:textColor="@color/app_color_font_aaaaaa"
+            android:textSize="@dimen/font_16" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/flFragmentContent" />
+</LinearLayout>

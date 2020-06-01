@@ -6,7 +6,7 @@ import androidx.lifecycle.Observer;
 
 import com.seanutf.android.arch.data.User;
 import com.seanutf.android.databinding.ActivityArchBinding;
-import com.seanutf.cmmonui.BaseActivity;
+import com.seanutf.cmmonui.arch.BaseActivity;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public class ArchActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         archBinding = ActivityArchBinding.inflate(getLayoutInflater());
         setContentView(archBinding.getRoot());
-        initView();
+        //initView();
         model = new OrderViewModelFactory().create(MyViewModel.class);
 
         model.getUsers().observe(this, new Observer<List<User>>() {
@@ -32,6 +32,7 @@ public class ArchActivity extends BaseActivity {
     }
 
     private void initView() {
+        //优化,处理，
         archBinding.tvText.setText("明天会更好");
     }
 }

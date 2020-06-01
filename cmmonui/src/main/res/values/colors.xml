@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingDefaultResource">
+
+
+    <!--颜色值及透明度请严格遵照设计图上给出的编码，不要自行猜测编写-->
+    <!--  <color name="app_color_opacity_0">00</color>
+      <color name="app_color_opacity_5">0D</color>
+      <color name="app_color_opacity_10">1A</color>
+      <color name="app_color_opacity_15">26</color>
+      <color name="app_color_opacity_20">33</color>
+      <color name="app_color_opacity_25">40</color>
+      <color name="app_color_opacity_30">4D</color>
+      <color name="app_color_opacity_35">59</color>
+      <color name="app_color_opacity_40">66</color>
+      <color name="app_color_opacity_45">73</color>
+      <color name="app_color_opacity_50">80</color>
+      <color name="app_color_opacity_55">8C</color>
+      <color name="app_color_opacity_60">99</color>
+      <color name="app_color_opacity_65">A6</color>
+      <color name="app_color_opacity_70">B3</color>
+      <color name="app_color_opacity_75">BF</color>
+      <color name="app_color_opacity_80">CC</color>
+      <color name="app_color_opacity_85">D9</color>
+      <color name="app_color_opacity_90">E6</color>
+      <color name="app_color_opacity_95">F2</color>
+      <color name="app_color_opacity_100">FF</color>-->
+    <!--透明值区 end -->
+
+    <!-- 颜色值区 start -->
+    <!-- 颜色值区 默认以app_color_颜色值命名， 字体颜色以app_color_font_颜色值命名 -->
+    <!-- 如果有透明值，以app_color_颜色值_透明度命名，字体颜色以app_color_font_颜色值_透明度命名-->
+    <color name="app_color_000000">#000000</color>
+    <color name="app_color_000000_0">#00000000</color>
+    <color name="app_color_000000_5">#0d000000</color>
+    <color name="app_color_000000_20">#33000000</color>
+    <color name="app_color_000000_25">#40000000</color>
+    <color name="app_color_000000_30">#4d000000</color>
+    <color name="app_color_000000_40">#66000000</color>
+    <color name="app_color_000000_50">#50000000</color>
+    <color name="app_color_000000_60">#99000000</color>
+    <color name="app_color_000000_70">#B3000000</color>
+    <color name="app_color_000000_75">#BF000000</color>
+    <color name="app_color_000000_80">#80000000</color>
+    <color name="app_color_111111_30">#4D111111</color>
+    <color name="app_color_111111_40">#66111111</color>
+    <color name="app_color_111111_50">#80111111</color>
+    <color name="app_color_111111_60">#99111111</color>
+    <color name="app_color_111111_90">#E6111111</color>
+    <color name="app_color_111111_100">#FF111111</color>
+    <color name="app_color_0f0f0f">#0F0F0F</color>
+    <color name="app_color_101010">#101010</color>
+    <color name="app_color_0a0400">#0a0400</color>
+
+    <color name="app_color_333333">#333333</color>
+    <color name="app_color_333333_90">#E6333333</color>
+    <color name="app_color_444444">#444444</color>
+    <color name="app_color_444444_40">#66444444</color>
+    <color name="app_color_555555">#555555</color>
+    <color name="app_color_666666">#666666</color>
+    <color name="app_color_777777">#777777</color>
+    <color name="app_color_888888">#888888</color>
+    <color name="app_color_999999">#999999</color>
+
+    <color name="app_color_fffae2">#fffae2</color>
+    <color name="app_color_fff4f4">#FFF4F4</color>
+    <color name="app_color_fff5f5">#FFF5F5</color>
+    <color name="app_color_ffeaea">#FFEAEA</color>
+    <color name="app_color_EBEBEB">#EBEBEB</color>
+
+    <color name="app_color_aaaaaa">#aaaaaa</color>
+    <color name="app_color_bbbbbb">#bbbbbb</color>
+    <color name="app_color_cccccc">#cccccc</color>
+    <color name="app_color_dddddd">#dddddd</color>
+    <color name="app_color_eeeeee">#eeeeee</color>
+
+    <color name="app_color_585858">#585858</color>
+    <color name="app_color_5c5c5c">#5C5C5C</color>
+    <color name="app_color_979797">#979797</color>
+    <color name="app_color_989898">#989898</color>
+    <color name="app_color_8d8d8d">#8d8d8d</color>
+    <color name="app_color_8f8f8f">#8f8f8f</color>
+    <color name="app_color_a9a9a9">#A9A9A9</color>
+    <color name="app_color_c3c3c3">#c3c3c3</color>
+    <color name="app_color_cdcdcd">#CDCDCD</color>
+    <color name="app_color_d8d8d8">#D8D8D8</color>
+    <color name="app_color_d9d9d9">#D9D9D9</color>
+    <color name="app_color_e0e0e0">#E0E0E0</color>
+    <color name="app_color_e4e4e4">#E4E4E4</color>
+    <color name="app_color_e5e5e5">#e5e5e5</color>
+    <color name="app_color_e6e6e6">#e6e6e6</color>
+    <color name="app_color_f0f0f0">#f0f0f0</color>
+    <color name="app_color_f1f1f1">#f1f1f1</color>
+    <color name="app_color_f2f2f2">#f2f2f2</color>
+    <color name="app_color_f2f2f2_85">#d9f2f2f2</color>
+    <color name="app_color_f5f5f5">#f5f5f5</color>
+    <color name="app_color_f6f6f6">#f6f6f6</color>
+    <color name="app_color_f7f7f7">#f7f7f7</color>
+    <color name="app_color_f8f8f8">#f8f8f8</color>
+    <color name="app_color_f9f9f9">#f9f9f9</color>
+    <color name="app_color_fafafa">#fafafa</color>
+    <color name="app_color_ffffff_0">#00FFFFFF</color>
+    <color name="app_color_ffffff_10">#1affffff</color>
+    <color name="app_color_ffffff_20">#33ffffff</color>
+    <color name="app_color_ffffff_35">#59ffffff</color>
+    <color name="app_color_ffffff_50">#80ffffff</color>
+    <color name="app_color_ffffff_60">#99ffffff</color>
+    <color name="app_color_ffffff_100">#FFFFFFFF</color>
+
+    <color name="app_color_fff3f3">#FFF3F3</color>
+    <color name="app_color_ece1e9">#ECE1E9</color>
+    <color name="app_color_939393">#939393</color>
+    <color name="app_color_828282_70">#B3828282</color>
+    <color name="app_color_5b5b5b_85">#d95b5b5b</color>
+    <color name="app_color_3a373a">#3A373A</color>
+
+
+    <color name="app_color_font_f95555_33">#33F95555</color>
+    <color name="app_color_3f51b5">#3F51B5</color>
+    <color name="app_color_0095ff">#0095FF</color>
+    <color name="app_color_2986fa">#2986FA</color>
+    <color name="app_color_b82fff">#B82FFF</color>
+    <color name="app_color_b325fd">#B325FD</color>
+    <color name="app_color_a424ff">#A424FF</color>
+    <color name="app_color_8e25ff">#8E25FF</color>
+    <color name="app_color_6209d8">#6209D8</color>
+    <color name="app_color_7120de">#7120DE</color>
+    <color name="app_color_7f1aeb">#7F1AEB</color>
+    <color name="app_color_ff0000">#FF0000</color>
+    <color name="app_color_ff0044">#FF0044</color>
+    <color name="app_color_E90101">#E90101</color>
+    <color name="app_color_ee220a">#EE220A</color>
+    <color name="app_color_FC0E30">#FC0E30</color>
+    <color name="app_color_ff4081">#FF4081</color>
+    <color name="app_color_fb5355">#fb5355</color>
+    <color name="app_color_f64C79">#f64C79</color>
+    <color name="app_color_font_f95555">#F95555</color>
+    <color name="app_color_f05f5c">#F05F5C</color>
+    <color name="app_color_ff4d59_90">#e6ff4d59</color>
+    <color name="app_color_FF594D">#FF594D</color>
+    <color name="app_color_fc584d">#fc584d</color>
+    <color name="app_color_fd5564">#fd5564</color>
+    <color name="app_color_font_fe5a5a">#fe5a5a</color>
+    <color name="app_color_ff5959">#ff5959</color>
+    <color name="app_color_font_ff4d4d">#ff4d4d</color>
+    <color name="app_color_FE667E">#FE667E</color>
+    <color name="app_color_f56f6f">#F56F6F</color>
+    <color name="app_color_font_ff9595">#ff9595</color>
+    <color name="app_color_font_ffc1c1">#ffc1c1</color>
+    <color name="app_color_ffd5b2">#FFD5B2</color>
+    <color name="app_color_f8874f">#f8874f</color>
+    <color name="app_color_font_ed9232">#ed9232</color>
+    <color name="app_color_font_ff9100">#FF9100</color>
+    <color name="app_color_font_ffa716">#FFA716</color>
+    <color name="app_color_dd9944">#DD9944</color>
+    <color name="app_color_font_ffa800">#ffa800</color>
+    <color name="app_color_font_ffb131">#FFB131</color>
+    <color name="app_color_ee9900">#ee9900</color>
+    <color name="app_color_ffac27">#FFAC27</color>
+    <color name="app_color_f5c400">#f5c400</color>
+    <color name="app_color_ffbf00">#FFBF00</color>
+    <color name="app_color_fffd65a">#FFD65A</color>
+    <color name="app_color_font_f4d590">#f4d590</color>
+    <color name="app_color_ffebdb">#FFEBDB</color>
+    <color name="app_color_e4c99b">#E4C99B</color>
+    <color name="app_color_f5e2ac">#F5E2AC</color>
+    <color name="app_color_f3d2a3">#F3D2A3</color>
+    <color name="app_color_fff2a0_90">#e6fff2a0</color>
+    <color name="app_color_ffeeef">#FFEEEF</color>
+    <color name="app_color_d5b275">#D5B275</color>
+    <color name="app_color_ffe2e2">#ffe2e2</color>
+    <color name="app_color_ffdada">#FFDADA</color>
+    <color name="app_color_ffeec8">#FFEEC8</color>
+    <color name="app_color_ffefa9">#FFEFA9</color>
+    <color name="app_color_82d655">#82d655</color>
+    <color name="app_color_F8E71C">#F8E71C</color>
+
+
+    <!-- 颜色值区 end -->
+
+    <!-- 历史保留区和作用命名区 start -->
+
+
+    <!--  字体颜色区 start -->
+    <!-- 使用建议：1在颜色区添加颜色，2在字体区添加并引用，3在页面使用， 4命名为bz_font_颜色值，app_color_font命名废弃-->
+    <color name="app_color_font_111111">@color/app_color_111111_100</color>
+    <color name="bz_font_111111">@color/app_color_111111_100</color>
+    <color name="app_color_font_ffffff">@color/app_color_ffffff_100</color>
+    <color name="app_color_font_f2f2f2">@color/app_color_f2f2f2</color>
+    <color name="app_color_font_aaaaaa">@color/app_color_aaaaaa</color>
+    <color name="app_color_font_bbbbbb">@color/app_color_bbbbbb</color>
+    <color name="app_color_font_cccccc">@color/app_color_cccccc</color>
+    <color name="app_color_font_dddddd">@color/app_color_dddddd</color>
+    <color name="app_color_font_444444">@color/app_color_444444</color>
+    <color name="app_color_font_555555">@color/app_color_555555</color>
+    <color name="app_color_font_666666">@color/app_color_666666</color>
+    <color name="app_color_font_888888">@color/app_color_888888</color>
+    <color name="app_color_font_f7f7f7">@color/app_color_f7f7f7</color>
+    <color name="app_color_font_fafafa">@color/app_color_fafafa</color>
+    <color name="app_color_font_333333">@color/app_color_333333</color>
+    <color name="app_color_font_fffae2">@color/app_color_fffae2</color>
+    <color name="app_color_font_eeeeee">@color/app_color_eeeeee</color>
+    <color name="app_color_font_999999">@color/app_color_999999</color>
+    <!--  字体颜色区 end   -->
+
+    <!--作用区 start-->
+    <!-- 建议：全局通用或者某种View的样式通用的颜色才使用作用命名， 并引用颜色值，否则直接使用颜色值，颜色值没有直接在颜色值区添加-->
+
+    <!--   页面底色  -->
+    <color name="color_activity_main_background">@color/app_color_f7f7f7</color>
+
+    <!--   页面内容背景色  -->
+    <color name="color_activity_content_background">@color/app_color_ffffff_100</color>
+
+    <!-- 主要文字颜色 -->
+    <color name="color_font_main">@color/app_color_font_f95555</color>
+
+    <!-- 重要文字 -->
+    <color name="color_font_important">@color/app_color_font_111111</color>
+
+    <!-- 次要文字 -->
+    <color name="color_font_sub">@color/app_color_font_888888</color>
+
+    <!-- 提示文字 -->
+    <color name="color_font_remind">@color/app_color_font_aaaaaa</color>
+
+
+    <!--作用区 end-->
+    <!-- 历史保留区和作用命名区 end -->
+</resources>

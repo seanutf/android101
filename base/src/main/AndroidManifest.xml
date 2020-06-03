@@ -3,6 +3,12 @@
     package="com.seanutf.android.base">
 
     <application>
+        <activity android:name=".aop.AopTest1Activity"></activity>
+        <activity
+            android:name=".aop.AopTestActivity"
+            android:label="@string/title_activity_aop_test"
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"
@@ -12,6 +18,8 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
         <activity android:name=".media.select.DefaultMediaSelectActivity" />
     </application>
+
 </manifest>

@@ -16,7 +16,6 @@ import com.seanutf.android.commonutil.util.AppSettings;
 import com.seanutf.android.commonutil.util.CollectionUtils;
 import com.seanutf.android.commonutil.util.StringUtil;
 import com.seanutf.android.databinding.ActivityHomeWikiPostBinding;
-import com.seanutf.android.homewiki.HomeWikiManager;
 import com.seanutf.cmmonui.arch.BaseActivity;
 import com.seanutf.cmmonui.util.ToastUtils;
 
@@ -112,8 +111,8 @@ public class HomeWikiPostActivity extends BaseActivity {
         data.sortId = sortNum;
         AppSettings.getInstance().setWikiPostSort(sortNum + 1);
 
-        //todo 替换
-        HomeWikiManager.getInstance().savePost(data);
+
+        //HomeWikiManager.getInstance().post(data);
     }
 
     private void selectMedia() {

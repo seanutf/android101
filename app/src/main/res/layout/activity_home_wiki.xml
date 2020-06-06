@@ -13,19 +13,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_wiki_list" />
 
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/tvBtnCreate"
-        android:gravity="center"
-        android:textSize="14sp"
-        android:textColor="@color/app_color_font_f95555"
-        app:layout_constraintRight_toRightOf="parent"
+    <ImageView
+        android:id="@+id/ivPost"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/ripple_post_circle_btn"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="50dp"
-        android:layout_marginRight="50dp"
-        android:text="创建" />
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

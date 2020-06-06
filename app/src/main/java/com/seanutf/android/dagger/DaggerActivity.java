@@ -19,5 +19,16 @@ public class DaggerActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dagger);
+
+        // Create an instance of the application graph
+        ApplicationGraph applicationGraph = DaggerApplicationGraph.create();
+
+        // Grab an instance of UserRepository from the application graph
+        UserRepository userRepository = applicationGraph.userRepository();
+
+        UserRepository userRepository2 = applicationGraph.userRepository();
+
+        //assert(userRepository != userRepository2)
+
     }
 }

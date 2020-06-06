@@ -1,6 +1,7 @@
 package com.seanutf.android.launch;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,6 +14,8 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.alibaba.android.arouter.facade.annotation.Autowired;
+import com.seanutf.android.base.aop.AopTest1Activity;
+import com.seanutf.android.base.aop.MyAnnotation;
 import com.seanutf.android.base.router.LauncherService;
 import com.seanutf.android.utils.AppContext;
 import com.seanutf.cmmonui.arch.BaseActivity;
@@ -78,8 +81,9 @@ public class LauncherActivity extends BaseActivity {
         }
 
     }
-
+    @MyAnnotation
     protected void checkPermissions() {
+        System.out.println("hui LauncherActivity checkPermissions");
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
                     || ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
@@ -117,16 +121,18 @@ public class LauncherActivity extends BaseActivity {
     }
 
     private void permissionAllow() {
-        if (AppContext.isLaunchMain()) {
-            launcherService.openMainUI();
-            finishActivity();
-        } else if (AppContext.isLaunchWiki()) {
-            launcherService.openWikiUI();
-            finishActivity();
-        } else {
-            launcherService.openTestUI();
-            finishActivity();
-        }
+        startActivity(new Intent(this, AopTest1Activity.class));
+
+//        if (AppContext.isLaunchMain()) {
+//            launcherService.openMainUI();
+//            finishActivity();
+//        } else if (AppContext.isLaunchWiki()) {
+//            launcherService.openWikiUI();
+//            finishActivity();
+//        } else {
+//            launcherService.openTestUI();
+//            finishActivity();
+//        }
     }
 
     private void permissionDeny() {

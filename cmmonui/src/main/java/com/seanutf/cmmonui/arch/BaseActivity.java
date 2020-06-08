@@ -29,6 +29,9 @@ public class BaseActivity extends AppCompatActivity {
 
     private void init(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         ARouter.getInstance().inject(this);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("家庭百科");
+        }
     }
 
     protected void finishActivity() {

@@ -28,4 +28,5 @@ public class WikiData {
 
     @ColumnInfo(name = "sortId")
     public int sortId;
+    public String imgUrl;
 }

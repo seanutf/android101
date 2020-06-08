@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:id="@+id/llPost"
     android:layout_width="match_parent"
@@ -13,8 +15,9 @@
         android:textSize="16sp"
         android:gravity="center"
         android:padding="5dp"
-        android:background="@color/app_color_font_f95555"
+        android:background="@drawable/rectangle_bg_f95555_13"
         android:textColor="@color/app_color_ffffff_100"
+        android:layout_marginRight="15dp"
         android:text="发送" />
 
     <androidx.core.widget.NestedScrollView
@@ -34,6 +37,7 @@
                 android:textColor="@color/app_color_111111_100"
                 android:hint="输入你想保存的标题吧～"
                 android:gravity="left"
+                android:text="中老年人如何补钙"
                 android:padding="10dp"
                 android:textColorHint="@color/app_color_aaaaaa"
                 android:textSize="16sp" />
@@ -48,6 +52,7 @@
                 android:layout_height="200dp"
                 android:id="@+id/etPost"
                 android:background="@null"
+                android:text="由于骨质疏松是老年人常见的疾病。40岁以上的中老年人中，大约有15%患有骨质疏松症。年龄越大，发病率越高。但此病发生的迟早及速度，与从食物中摄入的钙量多少有直接关系。所以，中老年人一定要及时补钙，那么，老年人怎么补钙呢？"
                 android:textColor="@color/app_color_111111_100"
                 android:hint="输入你想保存的内容吧～"
                 android:gravity="left"
@@ -73,7 +78,12 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/rvList" />
+                android:id="@+id/rvList"
+                app:spanCount="1"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_wiki_post_preview"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:visibility="visible" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

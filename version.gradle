@@ -87,7 +87,7 @@ ext{
     lintVersion = "26.5.1"
 
     //ui
-    constraintVersion = "1.1.3"
+    constraintVersion = "2.0.0-beta6"
     recyclerviewVersion = "1.2.0-alpha03"
     materialVersion = "1.1.0"
 

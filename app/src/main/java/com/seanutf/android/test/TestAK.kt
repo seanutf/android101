@@ -40,6 +40,10 @@ open class TestBD{
 
     }
 }
+
+object Test{
+    val i:Int = 3
+}
 /**
  * @param a is a num to max
  *

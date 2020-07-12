@@ -9,6 +9,9 @@ import androidx.recyclerview.widget.MergeAdapter;
 import com.seanutf.android.base.databinding.ActivityTest2Binding;
 import com.seanutf.cmmonui.arch.BaseActivity;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Test2Activity extends BaseActivity {
 
     ActivityTest2Binding vb;
@@ -23,6 +26,13 @@ public class Test2Activity extends BaseActivity {
         super.onCreate(savedInstanceState);
         vb = ActivityTest2Binding.inflate(getLayoutInflater());
         setContentView(vb.getRoot());
+        Map<String, String> aa = new HashMap<>();
+        Map<String, Object> bb = new HashMap<>();
+
+        bb.putAll(aa);
+        bb.put("dd", 1);
+        bb.put("dd", "fsdfdsf");
+        TestDataManager.INSTANCE.ff(aa);
         //mergeAdapter.addAdapter();
     }
 }

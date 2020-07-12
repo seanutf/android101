@@ -65,10 +65,10 @@ ext{
      * 如无适配需求，请不要随意修改
      * */
     //base
-    compileVersion = 29
-    buildVersion = "29.0.2"
+    compileVersion = 30
+    buildVersion = "30.0.0"
     minVersion = 21
-    targetVersion = 29
+    targetVersion = 30
 
     //common
     appcompatVersion = "1.1.0"

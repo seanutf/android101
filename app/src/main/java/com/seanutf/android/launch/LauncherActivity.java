@@ -1,7 +1,6 @@
 package com.seanutf.android.launch;
 
 import android.Manifest;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,10 +13,8 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.alibaba.android.arouter.facade.annotation.Autowired;
-import com.seanutf.android.base.aop.AopTest1Activity;
 import com.seanutf.android.base.aop.MyAnnotation;
 import com.seanutf.android.base.router.LauncherService;
-import com.seanutf.android.utils.AppContext;
 import com.seanutf.cmmonui.arch.BaseActivity;
 
 import java.util.ArrayList;
@@ -121,7 +118,15 @@ public class LauncherActivity extends BaseActivity {
     }
 
     private void permissionAllow() {
-        startActivity(new Intent(this, AopTest1Activity.class));
+        MyTestThread t = new MyTestThread();
+        MyTestThread1 t1 = new MyTestThread1();
+        t.setDaemon(true);
+        t1.setDaemon(true);
+        t.start();
+        t1.start();
+        Log.d("MyTestThread", "the Main is: " + Thread.currentThread().getName()
+                + ",and the id is:" + Thread.currentThread().getId());
+        //startActivity(new Intent(this, AopTest1Activity.class));
 
 //        if (AppContext.isLaunchMain()) {
 //            launcherService.openMainUI();
@@ -137,5 +142,23 @@ public class LauncherActivity extends BaseActivity {
 
     private void permissionDeny() {
         finishActivity();
+    }
+
+    class MyTestThread extends Thread {
+        @Override
+        public void run() {
+            super.run();
+            Log.d("MyTestThread", "the MyTestThread is: " + Thread.currentThread().getName()
+                    + ",and the id is:" + Thread.currentThread().getId());
+        }
+    }
+
+    class MyTestThread1 extends Thread {
+        @Override
+        public void run() {
+            super.run();
+            Log.d("MyTestThread", "the MyTestThread1 is: " + Thread.currentThread().getName()
+                    + ",and the id is:" + Thread.currentThread().getId());
+        }
     }
 }

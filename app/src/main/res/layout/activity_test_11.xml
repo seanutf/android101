@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvEnglish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@color/app_color_000000"
+        android:gravity="center"
+        android:text="This is only English test content"
+        android:textColor="@color/app_color_ffffff_100"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvEnglish2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@color/app_color_000000"
+        android:gravity="center"
+        android:text="This is only English test content"
+        android:textColor="@color/app_color_ffffff_100"
+        android:textSize="20sp"
+        android:includeFontPadding="false"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/tvChinese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@color/app_color_000000"
+        android:gravity="center"
+        android:text="这是一段测试文案"
+        android:textColor="@color/app_color_ffffff_100"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/tvChinese1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@color/app_color_000000"
+        android:gravity="center"
+        android:text="这是一段测试文案"
+        android:textColor="@color/app_color_ffffff_100"
+        android:textSize="20sp"
+        android:includeFontPadding="false"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/tvEnglishChinese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@color/app_color_000000"
+        android:gravity="center"
+        android:text="这是一段中English结合的Test Context"
+        android:textColor="@color/app_color_ffffff_100"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/tvEnglishChinese1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@color/app_color_000000"
+        android:gravity="center"
+        android:text="这是一段中English结合的Test Context"
+        android:textColor="@color/app_color_ffffff_100"
+        android:textSize="20sp"
+        android:includeFontPadding="false"
+        android:layout_marginTop="5dp" />
+</LinearLayout>

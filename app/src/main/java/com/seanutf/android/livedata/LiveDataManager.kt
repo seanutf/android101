@@ -24,8 +24,8 @@ class LiveDataManager {
         return mObservableChar!!
     }
 
-    fun getProducts(): MediatorLiveData<List<String>>? {
-        return mObservableProducts
+    fun getProducts() {
+
     }
 
     fun searchProducts(tt: String?): MediatorLiveData<List<String>>? {

@@ -45,15 +45,6 @@ public class AppInfo {
         String deviceId = AppSettings.getInstance().getDeviceId();
         if (StringUtil.isNotEmptyStringAbsolute(deviceId)) {
             return deviceId;
-        } else {
-            TelephonyManager tm = (TelephonyManager) CommonUtilApp.instance.getSystemService(Context.TELEPHONY_SERVICE);
-            if (tm != null) {
-                deviceId = tm.getDeviceId();
-                if (!TextUtils.isEmpty(deviceId)) {
-                    AppSettings.getInstance().setDeviceId(deviceId);
-                    return deviceId;
-                }
-            }
         }
 
         String uid = AppSettings.getInstance().getManagerId();

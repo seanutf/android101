@@ -9,6 +9,7 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import androidx.annotation.ColorRes
 import androidx.annotation.IntDef
+import androidx.core.content.ContextCompat
 import com.seanutf.cmmonui.R
 import kotlinx.android.synthetic.main.layout_footer.view.*
 
@@ -121,7 +122,7 @@ class FooterView @JvmOverloads constructor(context: Context, attrs: AttributeSet
             tv.text = text
         }
         if (textColorId != 0)
-            tv.setTextColor(resources.getColor(textColorId))
+            tv.setTextColor(ContextCompat.getColor(context, textColorId))
 
         if (backgroundColor != 0) {
             val parentView =
@@ -133,7 +134,7 @@ class FooterView @JvmOverloads constructor(context: Context, attrs: AttributeSet
                         STATE_FINISH -> llFinish
                         else -> throw RuntimeException()
                     }
-            parentView.setBackgroundColor(resources.getColor(backgroundColor))
+            parentView.setBackgroundColor(ContextCompat.getColor(context, backgroundColor))
         }
 
     }

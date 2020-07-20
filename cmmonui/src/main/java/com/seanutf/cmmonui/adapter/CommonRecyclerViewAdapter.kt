@@ -83,14 +83,14 @@ abstract class CommonRecyclerViewAdapter<T, V : RecyclerView.ViewHolder>(val con
 
     final override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         if (holder is FooterViewHolder) {
-            bindFooterViewHolder(holder, position)
+            bindFooterViewHolder()
         } else
             bind(holder as V, position)
 
     }
 
     final override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int, payloads: MutableList<Any>) {
-        if (payloads == null || payloads.size == 0) {
+        if (payloads.size == 0) {
             onBindViewHolder(holder, position)
         } else {
             bindWithPayloads(holder as V, position, payloads)
@@ -231,9 +231,7 @@ abstract class CommonRecyclerViewAdapter<T, V : RecyclerView.ViewHolder>(val con
 
     fun getDataSize(): Int = dataSet.size
 
-    protected fun bindFooterViewHolder(holder: FooterViewHolder, position: Int) {
-
-    }
+    private fun bindFooterViewHolder() = Unit
 
     protected abstract fun bind(holder: V, position: Int)
     protected open fun bindWithPayloads(holder: V, position: Int, payloads: MutableList<Any>) {}

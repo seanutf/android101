@@ -22,9 +22,9 @@ class LiveDataViewModel : ViewModel() {
         // based on what query the user has entered
         mProducts = Transformations.switchMap<CharSequence?, List<String>>(
                 manager.getLiveData("QUERY", null),
-                (label@ Function<CharSequence?, LiveData<List<String>>> { query: CharSequence? ->
+                (Function<CharSequence?, LiveData<List<String>>> { query: CharSequence? ->
                     if (TextUtils.isEmpty(query)) {
-                        return@label manager.getProducts()
+                        manager.getProducts()
                     }
                     manager.searchProducts("*$query*")
                 } as Function<CharSequence?, LiveData<List<String>>>))

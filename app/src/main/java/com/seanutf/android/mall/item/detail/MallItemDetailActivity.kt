@@ -17,7 +17,7 @@ class MallItemDetailActivity : AppCompatActivity() {
         vb = ActivityMallItemDetailBinding.inflate(this.layoutInflater)
         setContentView(vb.root)
         setViews()
-        vm = ViewModelProvider.NewInstanceFactory().create(MallItemDetailViewModel::class.java)
+        vm = ViewModelProvider(this).get(MallItemDetailViewModel::class.java)
     }
 
     private fun setViews() {

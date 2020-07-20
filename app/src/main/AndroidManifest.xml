@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:name">
-        <activity android:name=".mall.item.detail.MallItemDetailActivity"></activity>
+        <activity android:name=".livedata.LiveDataActivity"></activity>
+        <activity android:name=".mall.item.detail.MallItemDetailActivity" />
         <activity android:name=".arch.ArchActivity" />
         <activity android:name=".dagger.DaggerActivity" />
         <activity android:name=".launch.LauncherActivity">

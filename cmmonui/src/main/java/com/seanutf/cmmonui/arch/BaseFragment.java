@@ -51,15 +51,9 @@ public abstract class BaseFragment<T extends BaseViewModel> extends Fragment {
         }
 
         setViews(savedInstanceState);
-    }
 
-    @Override
-    @CallSuper
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
         viewModel = generateViewModel();
         handle();
-        // TODO: Use the ViewModel
     }
 
 
@@ -107,14 +101,14 @@ public abstract class BaseFragment<T extends BaseViewModel> extends Fragment {
 
     /**
      * 子类复写，用于子类开始处理页面业务逻辑
-     * 在{@link #onActivityCreated(Bundle)}方法中初始化
+     * 在{@link #onViewCreated(View, Bundle)}方法中初始化
      * {@link androidx.lifecycle.ViewModel}完成后调用
      */
     protected abstract void handle();
 
     /**
      * 子类复写，用于子类初始化自己的{@link androidx.lifecycle.ViewModel}
-     * 在{@link #onActivityCreated(Bundle)}方法中调用
+     * 在{@link #onViewCreated(View, Bundle)}方法中调用
      */
     protected abstract T generateViewModel();
 

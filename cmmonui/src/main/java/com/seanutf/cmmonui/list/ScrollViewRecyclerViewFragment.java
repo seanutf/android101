@@ -39,8 +39,12 @@ public class ScrollViewRecyclerViewFragment extends BaseFragment<List1ViewModel>
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+
+    }
+
+    @Override
+    protected void handle() {
         viewModel.getSvData().observe(getViewLifecycleOwner(), new Observer<List<SvData>>() {
             @Override
             public void onChanged(List<SvData> svData) {
@@ -51,16 +55,6 @@ public class ScrollViewRecyclerViewFragment extends BaseFragment<List1ViewModel>
         });
 
         vb.rvList.setLayoutManager(new LinearLayoutManager(getActivity()));
-    }
-
-    @Override
-    public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-
-    }
-
-    @Override
-    protected void handle() {
-
     }
 
     @Override

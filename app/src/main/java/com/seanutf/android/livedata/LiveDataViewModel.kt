@@ -29,4 +29,17 @@ class LiveDataViewModel : ViewModel() {
                     manager.searchProducts("*$query*")
                 } as Function<CharSequence?, LiveData<List<String>>>))
     }
+
+    fun testTry() {
+        val result = kotlin.runCatching { doSomeThings() }.isFailure
+        val result1 = kotlin.runCatching { doSomeThings() }.isSuccess
+
+        val result3 = kotlin.runCatching { doSomeThings() }.getOrThrow()
+        val result4 = kotlin.runCatching { doSomeThings() }.getOrElse { doSomeThings() }
+    }
+
+    @Throws
+    fun doSomeThings(): Exception {
+        return NullPointerException()
+    }
 }

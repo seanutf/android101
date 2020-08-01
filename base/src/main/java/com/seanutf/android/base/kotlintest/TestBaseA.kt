@@ -10,9 +10,9 @@ class TestBaseA {
 
     }
 
-    private fun launch(context: CoroutineDispatcher, block: suspend CoroutineScope.() -> Unit) {
-
-    }
+//    private fun launch(context: CoroutineDispatcher, block: suspend CoroutineScope.() -> Unit) {
+//
+//    }
 
 
     private fun getImage(): String? {

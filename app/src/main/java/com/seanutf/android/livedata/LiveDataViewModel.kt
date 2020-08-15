@@ -5,6 +5,8 @@ import androidx.arch.core.util.Function
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
+import com.seanutf.android.base.media.data.MediaItem
+import com.seanutf.android.base.utils.nonNullOrNull
 
 class LiveDataViewModel : ViewModel() {
 
@@ -31,9 +33,16 @@ class LiveDataViewModel : ViewModel() {
     }
 
     fun testTry() {
+
+        require(true)
+        val mediaItem: MediaItem?
+        mediaItem = MediaItem()
         val result = kotlin.runCatching { doSomeThings() }.isFailure
         val result1 = kotlin.runCatching { doSomeThings() }.isSuccess
-
+        nonNullOrNull(mediaItem,
+                {
+                    it.isFirstSelect
+                }, { val cc = "fff" })
         val result3 = kotlin.runCatching { doSomeThings() }.getOrThrow()
         val result4 = kotlin.runCatching { doSomeThings() }.getOrElse { doSomeThings() }
     }

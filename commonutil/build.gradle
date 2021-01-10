@@ -19,6 +19,7 @@ android {
         buildConfigField "int", "TEST_ENVIRONMNET", "${rootProject.ext.testEnvironment}"
         buildConfigField "int", "RELEASE_ENVIRONMNET", "${rootProject.ext.releaseEnvironment}"
         buildConfigField "int", "CURRENT_ENVIRONMNET", "${rootProject.ext.currentEnvironment}"
+        buildConfigField "String", "VERSION_NAME", "\"${rootProject.ext.appVersionName}\""
     }
 
     buildTypes {

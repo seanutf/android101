@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.MergeAdapter;
+import androidx.recyclerview.widget.ConcatAdapter;
 
 import com.seanutf.android.base.databinding.ActivityTest2Binding;
 import com.seanutf.cmmonui.arch.BaseActivity;
@@ -15,7 +15,7 @@ import java.util.Map;
 public class Test2Activity extends BaseActivity {
 
     ActivityTest2Binding vb;
-    MergeAdapter mergeAdapter;
+    ConcatAdapter mergeAdapter;
 
     public static void startActivity(BaseActivity aa) {
         aa.startActivity(new Intent(aa, Test2Activity.class));

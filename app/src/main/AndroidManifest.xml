@@ -28,6 +28,7 @@
         </activity>
         <activity android:name=".main.MainActivity" />
         <activity android:name=".custom.CustomViewActivity" />
+        <activity android:name=".mvi.MVITestActivity" />
         <activity android:name=".homewiki.list.HomeWikiListActivity" />
         <activity android:name=".homewiki.detail.HomeWikiDetailActivity" />
         <activity android:name=".homewiki.post.HomeWikiPostActivity" />

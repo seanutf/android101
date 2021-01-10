@@ -46,23 +46,15 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "androidx.appcompat:appcompat:${rootProject.ext.appcompatVersion}"
-    api "com.google.dagger:dagger:${rootProject.ext.daggerVersion}"
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    annotationProcessor "com.google.dagger:dagger-compiler:${rootProject.ext.daggerCompilerVersion}"
-
-    testImplementation "junit:junit:${rootProject.ext.junitVersion}"
-    androidTestImplementation "androidx.test:runner:${rootProject.ext.testRunnerVersion}"
-    androidTestImplementation "androidx.test.espresso:espresso-core:${rootProject.ext.espressoVersion}"
-
     implementation project(':base')
 
     //微信版本SharedPreferences
     implementation "com.tencent:mmkv:$rootProject.ext.mmkvVersion"
-    implementation "androidx.core:core-ktx:+"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     api 'com.alibaba:arouter-api:1.5.0'
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+    //di
+    api "com.google.dagger:dagger:${rootProject.ext.daggerVersion}"
+    annotationProcessor "com.google.dagger:dagger-compiler:${rootProject.ext.daggerCompilerVersion}"
 
 }
 final def log = project.logger

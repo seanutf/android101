@@ -16,7 +16,7 @@ import androidx.core.content.ContextCompat;
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.seanutf.android.base.aop.MyAnnotation;
 import com.seanutf.android.base.router.LauncherService;
-import com.seanutf.android.mvi.MVITestActivity;
+import com.seanutf.android.mvi.ui.MVITestActivity;
 import com.seanutf.cmmonui.arch.BaseActivity;
 
 import java.util.ArrayList;

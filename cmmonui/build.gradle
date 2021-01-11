@@ -43,69 +43,138 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation "androidx.appcompat:appcompat:${rootProject.ext.appcompatVersion}"
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    testImplementation "junit:junit:${rootProject.ext.junitVersion}"
-    androidTestImplementation "androidx.test.ext:junit:${rootProject.ext.testJunitExt}"
-    androidTestImplementation "androidx.test.espresso:espresso-core:${rootProject.ext.espressoVersion}"
+    /**
+     * android 官方库
+     * Square 公司的库
+     * Kotlin 官方库
+     * 统一都在UI lib下提供
+     * */
 
-    api "androidx.constraintlayout:constraintlayout:${rootProject.ext.constraintVersion}"
-    api "androidx.recyclerview:recyclerview:${rootProject.ext.recyclerviewVersion}"
-    api "com.google.android.material:material:${rootProject.ext.materialVersion}"
+    /**
+     *
+     * android 官方库
+     * */
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    // ViewModel and LiveData
-    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.ext.lifecycleVersion"
-    implementation "android.arch.lifecycle:viewmodel:$rootProject.ext.lifecycleVersion"
-    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$rootProject.ext.lifecycleVersion"
+    //test
+    testApi "junit:junit:${rootProject.ext.junitVersion}"
+    androidTestApi "androidx.test.ext:junit:${rootProject.ext.testJunitExt}"
+    androidTestApi "androidx.test.espresso:espresso-core:${rootProject.ext.espressoVersion}"
+    androidTestApi "androidx.test:runner:${rootProject.ext.testRunnerVersion}"
+
+    //core、appcompat、legacy-support
+    api "androidx.core:core-ktx:+"
+    api "androidx.appcompat:appcompat:${rootProject.ext.appcompatVersion}"
+    api 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    //lifecycle、ViewModel and LiveData
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+    api "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+    api 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    api "androidx.lifecycle:lifecycle-extensions:$rootProject.ext.lifecycleVersion"
+    api "android.arch.lifecycle:viewmodel:$rootProject.ext.lifecycleVersion"
+    api "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
+    //api "androidx.lifecycle:lifecycle-common-java8:$rootProject.ext.lifecycleVersion"
     // For Kotlin use kapt instead of annotationProcessor
     // alternately - if using Java8, use the following instead of lifecycle-compiler
-    implementation "androidx.lifecycle:lifecycle-common-java8:$rootProject.ext.lifecycleVersion"
+    api "androidx.lifecycle:lifecycle-common-java8:$rootProject.ext.lifecycleVersion"
+
+    //navigation
+    api 'androidx.navigation:navigation-fragment:2.3.1'
+    api 'androidx.navigation:navigation-ui:2.3.1'
 
 
+    //room
+    def room_version = "2.2.5"
+    api "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version" // For Kotlin use kapt instead of annotationProcessor
+    // optional - Kotlin Extensions and Coroutines support for Room
+    api "androidx.room:room-ktx:$room_version"
+    // optional - RxJava support for Room
+    api "androidx.room:room-rxjava2:$room_version"
+    // optional - Guava support for Room, including Optional and ListenableFuture
+    api "androidx.room:room-guava:$room_version"
+    // Test helpers
+    testApi "androidx.room:room-testing:$room_version"
+
+
+    //startup
+    api "androidx.startup:startup-runtime:1.0.0-alpha01"
+
+    //di
+    api "com.google.dagger:dagger:${rootProject.ext.daggerVersion}"
+    annotationProcessor "com.google.dagger:dagger-compiler:${rootProject.ext.daggerCompilerVersion}"
+
+    //ui、view、layout
+    api "com.google.android.material:material:${rootProject.ext.materialVersion}"
+    api "androidx.constraintlayout:constraintlayout:${rootProject.ext.constraintVersion}"
+    api "androidx.recyclerview:recyclerview:${rootProject.ext.recyclerviewVersion}"
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+    /**
+     *
+     * Kotlin 官方库
+     * */
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    api 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9'
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9"
+    ext.ktor_version = '1.3.2'
+    api "io.ktor:ktor-client-core:$ktor_version"
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+    /**
+     *
+     * 其他知名的库
+     * */
+    api 'com.squareup.retrofit2:retrofit:2.9.0'
+    api "com.squareup.retrofit2:converter-moshi:2.6.2"
+    api 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    api 'io.reactivex.rxjava3:rxjava:3.0.0'
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+    /**
+     *
+     * 其他第三方 UI相关库
+     * */
     //扫码
-    implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.3.6'
+    api 'cn.bingoogolapple:bga-qrcode-zxing:1.3.6'
     api 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
     //二维码
-    implementation 'com.github.kenglxn.QRGen:android:2.6.0'
-    implementation 'com.google.zxing:core:3.3.3'
+    api 'com.github.kenglxn.QRGen:android:2.6.0'
+    api 'com.google.zxing:core:3.3.3'
 
     //检查更新
-    implementation 'com.allenliu.versionchecklib:library:2.2.0'
+    api 'com.allenliu.versionchecklib:library:2.2.0'
 
     //阴影
-    implementation 'com.github.bigmanLau:CardviewFix:1.0.3'
+    api 'com.github.bigmanLau:CardviewFix:1.0.3'
 
     //圆角图片，过时，请使用Glide加载圆角图片
-    implementation 'com.makeramen:roundedimageview:2.2.1'
+    api 'com.makeramen:roundedimageview:2.2.1'
 
     //图片展示浏览，提供类相册效果，支持超大图片
-    implementation('com.davemorrissey.labs:subsampling-scale-image-view:3.10.0') {
+    api('com.davemorrissey.labs:subsampling-scale-image-view:3.10.0') {
         exclude group: 'com.android.support'
     }
 
     //与web js交互
-    implementation 'com.github.lzyzsd:jsbridge:1.0.4'
+    api 'com.github.lzyzsd:jsbridge:1.0.4'
 
     //进度条
     //implementation 'com.kaopiz:kprogresshud:1.2.0'
 
     //popupwindow
-    implementation('com.github.zyyoona7:EasyPopup:1.1.2') {
+    api('com.github.zyyoona7:EasyPopup:1.1.2') {
         exclude group: 'com.android.support'
     }
 
     //alert
-    implementation 'com.tapadoo.android:alerter:4.0.2'
+    api 'com.tapadoo.android:alerter:4.0.2'
 
     //图片裁剪
     //implementation project(':cropper')
     api project(':commonutil')
-    implementation "androidx.core:core-ktx:+"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     api 'com.alibaba:arouter-api:1.5.0'
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'

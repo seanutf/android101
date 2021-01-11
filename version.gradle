@@ -71,9 +71,9 @@ ext{
     targetVersion = 30
 
     //common
-    appcompatVersion = "1.1.0"
-    daggerVersion = "2.25.4"
-    daggerCompilerVersion = "2.25.4"
+    appcompatVersion = "1.2.0"
+    daggerVersion = "2.28.3"
+    daggerCompilerVersion = "2.28.3"
     lifecycleVersion = "2.2.0"
     mmkvVersion = '1.0.23'
 
@@ -87,9 +87,9 @@ ext{
     lintVersion = "26.5.1"
 
     //ui
-    constraintVersion = "2.0.0-beta6"
-    recyclerviewVersion = "1.2.0-alpha03"
-    materialVersion = "1.1.0"
+    constraintVersion = "2.0.4"
+    recyclerviewVersion = "1.2.0-alpha06"
+    materialVersion = "1.2.1"
 
 
 

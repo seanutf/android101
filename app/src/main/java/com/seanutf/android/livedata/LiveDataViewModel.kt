@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.seanutf.android.base.media.data.MediaItem
-import com.seanutf.android.base.utils.nonNullOrNull
+import com.seanutf.android.base.utils.isNullObject
 
 class LiveDataViewModel : ViewModel() {
 
@@ -39,7 +39,7 @@ class LiveDataViewModel : ViewModel() {
         mediaItem = MediaItem()
         val result = kotlin.runCatching { doSomeThings() }.isFailure
         val result1 = kotlin.runCatching { doSomeThings() }.isSuccess
-        nonNullOrNull(mediaItem,
+        isNullObject(mediaItem,
                 {
                     it.isFirstSelect
                 }, { val cc = "fff" })

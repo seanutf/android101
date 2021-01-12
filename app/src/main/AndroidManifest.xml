@@ -33,6 +33,7 @@
         <activity android:name=".homewiki.detail.HomeWikiDetailActivity" />
         <activity android:name=".homewiki.post.HomeWikiPostActivity" />
         <activity android:name=".homewiki.post.HomeWikiTagListActivity" />
+        <activity android:name=".lazyfragment.LazyFragmentActivity" />
         <activity android:name=".test.Test1Activity" />
         <activity android:name=".test.Test2Activity" />
     </application>

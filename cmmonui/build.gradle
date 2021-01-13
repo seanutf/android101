@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 android {
@@ -102,8 +103,10 @@ dependencies {
     api "androidx.startup:startup-runtime:1.0.0-alpha01"
 
     //di
-    api "com.google.dagger:dagger:${rootProject.ext.daggerVersion}"
-    annotationProcessor "com.google.dagger:dagger-compiler:${rootProject.ext.daggerCompilerVersion}"
+    //api "com.google.dagger:dagger:${rootProject.ext.daggerVersion}"
+    //annotationProcessor "com.google.dagger:dagger-compiler:${rootProject.ext.daggerCompilerVersion}"
+    api "com.google.dagger:hilt-android:${rootProject.ext.hiltVersion}"
+    //kapt "com.google.dagger:hilt-android-compiler:${rootProject.ext.hiltVersion}"
 
     //ui、view、layout
     api "com.google.android.material:material:${rootProject.ext.materialVersion}"

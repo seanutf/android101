@@ -8,5 +8,7 @@ package com.seanutf.android.main
 class TodoList {
     /**
      * todo 1 列表刷新后浏览位置的恢复
+     * https://blog.csdn.net/CSDN2497242041/article/details/79294470
+     * http://www.voidcn.com/article/p-uqxygtyd-dk.html
      * */
 }

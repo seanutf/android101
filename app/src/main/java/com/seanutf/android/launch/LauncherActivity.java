@@ -14,10 +14,8 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.alibaba.android.arouter.facade.annotation.Autowired;
-import com.seanutf.android.base.aop.MyAnnotation;
 import com.seanutf.android.base.router.LauncherService;
 import com.seanutf.android.lazyfragment.LazyFragmentActivity;
-import com.seanutf.android.mvi.ui.MVITestActivity;
 import com.seanutf.cmmonui.arch.BaseActivity;
 
 import java.util.ArrayList;
@@ -81,7 +79,6 @@ public class LauncherActivity extends BaseActivity {
         }
 
     }
-    @MyAnnotation
     protected void checkPermissions() {
         System.out.println("hui LauncherActivity checkPermissions");
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

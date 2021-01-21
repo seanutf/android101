@@ -15,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:name">
+        <activity android:name=".lazyfragment.LazyFragmentActivity2"></activity>
         <activity android:name=".listtest.ListTestActivity" />
         <activity android:name=".livedata.LiveDataActivity" />
         <activity android:name=".mall.item.detail.MallItemDetailActivity" />

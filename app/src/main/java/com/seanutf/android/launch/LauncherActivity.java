@@ -16,6 +16,7 @@ import androidx.core.content.ContextCompat;
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.seanutf.android.base.router.LauncherService;
 import com.seanutf.android.lazyfragment.LazyFragmentActivity;
+import com.seanutf.android.lazyfragment.LazyFragmentActivity2;
 import com.seanutf.cmmonui.arch.BaseActivity;
 
 import java.util.ArrayList;
@@ -127,7 +128,7 @@ public class LauncherActivity extends BaseActivity {
         Log.d("MyTestThread", "the Main is: " + Thread.currentThread().getName()
                 + ",and the id is:" + Thread.currentThread().getId());
         //startActivity(new Intent(this, MVITestActivity.class));
-        startActivity(new Intent(this, LazyFragmentActivity.class));
+        startActivity(new Intent(this, LazyFragmentActivity2.class));
 
 //        if (AppContext.isLaunchMain()) {
 //            launcherService.openMainUI();

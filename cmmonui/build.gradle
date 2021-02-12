@@ -64,29 +64,27 @@ dependencies {
     androidTestApi "androidx.test:runner:${rootProject.ext.testRunnerVersion}"
 
     //core、appcompat、legacy-support
-    api "androidx.core:core-ktx:+"
+    api "androidx.core:core-ktx:${rootProject.ext.coreVersion}"
     api "androidx.appcompat:appcompat:${rootProject.ext.appcompatVersion}"
     api 'androidx.legacy:legacy-support-v4:1.0.0'
 
     //lifecycle、ViewModel and LiveData
-    api "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
-    api "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
-    api 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    api "androidx.lifecycle:lifecycle-extensions:$rootProject.ext.lifecycleVersion"
-    api "android.arch.lifecycle:viewmodel:$rootProject.ext.lifecycleVersion"
-    api "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:${rootProject.ext.lifecycleVersion}"
+    api "androidx.lifecycle:lifecycle-livedata-ktx:${rootProject.ext.lifecycleVersion}"
+    api "android.arch.lifecycle:viewmodel:${rootProject.ext.lifecycleVersion}"
+    api "androidx.lifecycle:lifecycle-runtime-ktx:${rootProject.ext.lifecycleVersion}"
     //api "androidx.lifecycle:lifecycle-common-java8:$rootProject.ext.lifecycleVersion"
     // For Kotlin use kapt instead of annotationProcessor
     // alternately - if using Java8, use the following instead of lifecycle-compiler
-    api "androidx.lifecycle:lifecycle-common-java8:$rootProject.ext.lifecycleVersion"
+    api "androidx.lifecycle:lifecycle-common-java8:${rootProject.ext.lifecycleVersion}"
 
     //navigation
-    api 'androidx.navigation:navigation-fragment:2.3.1'
-    api 'androidx.navigation:navigation-ui:2.3.1'
+    api 'androidx.navigation:navigation-fragment:2.3.3'
+    api 'androidx.navigation:navigation-ui:2.3.3'
 
 
     //room
-    def room_version = "2.2.5"
+    def room_version = "2.2.6"
     api "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version" // For Kotlin use kapt instead of annotationProcessor
     // optional - Kotlin Extensions and Coroutines support for Room
@@ -100,7 +98,7 @@ dependencies {
 
 
     //startup
-    api "androidx.startup:startup-runtime:1.0.0-alpha01"
+    api "androidx.startup:startup-runtime:1.0.0"
 
     //di
     //api "com.google.dagger:dagger:${rootProject.ext.daggerVersion}"

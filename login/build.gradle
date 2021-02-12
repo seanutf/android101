@@ -27,7 +27,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':app')
     implementation project(path: ':cmmonui')
-    implementation "androidx.core:core-ktx:+"
+    implementation "androidx.core:core-ktx:${rootProject.ext.coreVersion}"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 repositories {

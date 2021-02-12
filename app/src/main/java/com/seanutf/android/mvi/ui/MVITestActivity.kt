@@ -3,7 +3,7 @@ package com.seanutf.android.mvi.ui
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -64,14 +64,10 @@ class MVITestActivity : BaseActivity() {
 
 
     private fun setupViewModel() {
-        mainViewModel = ViewModelProviders.of(
-                this,
+        mainViewModel = ViewModelProvider(viewModelStore,
                 ViewModelFactory(
                         ApiHelperImpl(
-                                RetrofitBuilder.apiService
-                        )
-                )
-        ).get(MainViewModel::class.java)
+                                RetrofitBuilder.apiService))).get(MainViewModel::class.java)
     }
 
 

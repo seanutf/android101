@@ -33,7 +33,7 @@ dependencies {
     testImplementation "junit:junit:${rootProject.ext.junitVersion}"
     androidTestImplementation "androidx.test:runner:${rootProject.ext.testRunnerVersion}"
     androidTestImplementation "androidx.test.espresso:espresso-core:${rootProject.ext.espressoVersion}"
-    implementation "androidx.core:core-ktx:+"
+    implementation "androidx.core:core-ktx:${rootProject.ext.coreVersion}"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 //    implementation "com.android.tools.lint:lint-api:26.5.3"
 //    implementation "com.android.tools.lint:lint-checks:26.5.3"
